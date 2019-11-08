@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Jomolhari|Oswald&display=swap');
+
+body {
+  color: #FFFAF1;
+  background-color: black;
+  font-family: 'Jomolhari', serif;
+  max-width: 960px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 6em;
+  border: 2px solid #ccc;
+}
+
+main {
+  /*position:relative;*/
+  margin-left: 2em;
+}
+
+nav {
+  position:fixed;
+  top: 2em;
+  right:5em;
+  text-align: left;
+  padding-right: 10px;
+  border: 2px solid #FFFAF1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+address {
+  display: grid;
+  grid-template-areas:
+  'insta spoti contact';
+  grid-gap:0.2em;
+}
+
+#insta {
+  grid-area: insta;
+}
+
+#spoti {
+  grid-area: spoti;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+main p {
+  margin-left: 4em;
+}
+
+a {
+  text-decoration:none;
+  color:#1a75ff;
+}
+
+a:hover {
+  color:#ff166a;
+}
+
+a:active {
+  color:white;
+}
+
+a:visited {
+  color:purple;
+}
+
+li a:visited {
+  color: #1a75ff;
+}
