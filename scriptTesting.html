@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<div>
+			First Name: <input type="text" id="firstname" name="firstname"> <br/>
+			Last Name: <input type="text" id="lastname" name="lastname"> <br/>
+		</div>
+		<button onclick="myFunction()">Try it</button>
+
+		<script>
+			function myFunction() {
+			  var first = document.getElementById("firstname").value;
+			  var last = document.getElementById("lastname").value;
+			  if (first=="" || last=='') {
+				alert("Please fill in every form field in here.")
+			  }
+			  else {
+				alert("Your name is " + first + " " + last);
+			  }
+			}
+		</script>
+
+	</body>
+</html>
