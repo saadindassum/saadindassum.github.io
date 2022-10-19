@@ -1,0 +1,80 @@
+.tomorrow .title::after {
+    content: "Key and Stevie";
+}
+
+.tomorrow .tomorrow-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tomorrow .tomorrow-content .left{
+    width: 45%;
+}
+
+.tomorrow .tomorrow-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tomorrow .tomorrow-content .right{
+    width: 55%;
+}
+
+.tomorrow .tomorrow-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tomorrow .tomorrow-content .right p{
+    text-align: justify;
+}
+
+/*Download EPK button*/
+.tomorrow .tomorrow-content .right a{
+    display: inline-block;
+    background: #fabf00;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #fabf00;
+    transition: all 0.3s ease;
+}
+
+.tomorrow .tomorrow-content .right a:hover {
+    color: white;
+    background: none;
+}
+
+/* Responsive media query */
+
+@media (max-width: 1104px) {
+   .tomorrow .tomorrow-content .left img{
+        height: 350px;
+        width: 350px;
+   }
+}
+
+@media (max-width: 947px) {
+    /*tomorrow*/
+
+    .tomorrow .tomorrow-content .column{
+        width: 100%;
+    }
+
+    .tomorrow .tomorrow-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .tomorrow .tomorrow-content .right{
+        flex: 100%;
+    }
+}

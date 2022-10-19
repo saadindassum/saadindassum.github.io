@@ -3,114 +3,207 @@
 <html lang="en">
 	<head>
 		<!--Social media icons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/emamilianStyle.css"/>
-		<link rel="stylesheet" type="text/css" href="countdownStyle.css"/>
-		<link rel="icon" type="img/ico" href="assets/key.ico"/>
+		<link rel="icon" type="img/ico" href="assets/key.ico">
 
 		<title>Saadin Dassum - Official Site</title>
 		<meta charset="UTF-8"/>
-		<meta name="description" content="Music, tour and show dates"/>
-		<meta name="keywords" content="Saadin Dassum, music, musician, story, rock, new wave, love, piano, guitar, miami"/>
+		<meta name="description" content="Music, videos, and shenanigans"/>
+		<meta name="keywords" content="Saadin Dassum, music, musician, live music, rock, new wave, post punk, piano, guitar, miami"/>
 		<meta name="author" content="Saadin Dassum"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta property="og:image" content="http://saadindassum.com/assets/thumb.jpg" />
+		<meta property="og:image" content="http://saadindassum.com/assets/thumb.png" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://saadindassum.com/" />
 		<meta property="og:title" content="Saadin Dassum" />
-		<meta property="og:description" content="Music, shows, and more."/>
-	</head>
+		<meta property="og:description" content="New releases and shows." />
 
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+		<link rel="stylesheet" type="text/css" href="css/tomorrow.css">
+		<link rel="stylesheet" type="text/css" href="css/videobg.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+	</head>
 	<body>
-		<section id="mhead">
-			<!--Mobile Header-->
-			<header>
-				<div id="topnav">
-					<a href="" class="active" style="border:none">
-					<img src="assets/logo.png" alt="Logo" style="width:8%;height:auto"/>
-					</a>
-					<div id="pages">
-						<a href="lyrics.html">Lyrics</a>
-						<a href="sdshows.html">Upcoming Shows</a>
-						<a href="credits.html">Credits</a>
-					<div id="socialMediaButtons">
-						<button onclick="window.location.href='https://open.spotify.com/artist/0USg6VGxyTCghZFPGRKBwL'"><i class = "fa fa-spotify" style="font-size:100%"></i></button>
-						<button onclick="window.location.href='https://www.instagram.com/saadindassum/'"><i class="fa fa-instagram" style="font-size:100%"></i></button>
-						<button onclick="window.location.href='https://www.facebook.com/Saadin-Dassum-366472384219722/'"><i class="fa fa-facebook" style="font-size:100%"></i></button>
-						<button onclick="window.location.href='https://www.youtube.com/channel/UC_ua_8RskZGWc5y7R-dwXCg'"><i class="fa fa-youtube" style="font-size:100%"></i></button>
-						<button onclick="window.location.href='https://soundcloud.com/saadin-dassum'"><i class="fa fa-soundcloud" style="font-size:100%"></i></button>
+		<div class="scroll-up-btn">
+			<i class="fas fa-angle-up"></i>
+		</div>
+		<!-- N A V B A R -->
+		<nav class="navbar">
+			<div class="max-width">
+				<div class="logo"><a href="#"><img src="assets/logo.png" id="logo" alt="logo.png"></a></div>
+				<ul class='menu'>
+					<li><a href='#home' class="menu-btn">Home</a></li>
+					<li><a href='#about' class="menu-btn">Bio</a></li>
+					<li><a href='#news' class="menu-btn">News</a></li>
+					<li><a href='#tomorrow' class="menu-btn">Tomorrow</a></li>
+					<span class="desk-socials">
+						<li><a href='https://www.instagram.com/saadindassum/'><i class="fa-brands fa-instagram" class="social"></i></a></li>
+						<li><a href='https://www.tiktok.com/@saadindassum'><i class="fa-brands fa-tiktok" class="social"></i></a></li>
+						<li><a href='https://open.spotify.com/artist/0USg6VGxyTCghZFPGRKBwL?si=973b3728a0674e7c'><i class="fa-brands fa-spotify"></i></a></li>
+						<li><a href='https://music.apple.com/us/artist/saadin-dassum/1469155696'><i class="fa-brands fa-apple"></i></a></li>
+					</span>
+					<li class="mobile-item">
+						<a href='https://www.instagram.com/saadindassum/' class="social"><i class="fa-brands fa-instagram"></i></a>
+						<a href='https://www.tiktok.com/@saadindassum' class="social"><i class="fa-brands fa-tiktok"></i></a>
+						<a href='https://open.spotify.com/artist/0USg6VGxyTCghZFPGRKBwL?si=973b3728a0674e7c' class="social"><i class="fa-brands fa-spotify"></i></a>
+						<a href='https://music.apple.com/us/artist/saadin-dassum/1469155696' class="social"><i class="fa-brands fa-apple"></i></a>
+					</li>
+				</ul>
+				<div class="menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+
+			</div>
+		</nav>
+
+		<!-- H O M E  S E C T I O N  S T A R T-->
+		<section class="home" id="home">
+			<div class="max-width">
+				<div class="home-content">
+					<div class="text-1">Maybe</div>
+					<div class="text-2"><span>Tomorrow</span></div>
+					<!--div class="text-3">Latest release:</div-->
+					<a href="https://lnk.to/tmr0/">Stream here!</a>
+					<div class="color-overlay">
+						<!--Video bg-->
+							<video id="videoBG" poster="assets/banner.jpg" autoplay muted loop>
+								<source src="assets/videoBanner.mp4" type="video/mp4">
+							</video>
+					<!--Video bg end-->
 					</div>
 				</div>
-						<a href="javascript:void(0);" class="icon" onclick="doTheThing()">
-							<i class="fa fa-bars"></i>
-						</a>
-					</div>
-				<script>
-					function doTheThing() {
-						var x = document.getElementById("pages");
-						if (x.style.display == "block") {
-							x.style.display = "none";
-						}
-						else {
-							x.style.display = "block";
-						}
-					}
-				</script>
-			</header>
-			<!--End of  Mobile Header-->
+			</div>
 		</section>
-		<section id="deskhead">
-				<!--Desktop Header-->
-				<header>
-					<a href="index.html">
-					<img src="assets/logo.png" alt="logo" class="logo">
-					</a>
-					<div class = "navBar">
-						<nav>
-							<ul style="margin-top:1%">
-								<li><button onclick="window.location.href='lyrics.html'">Lyrics</button></li>
-								<li><button onclick="window.location.href='sdshows.html'">Upcoming Shows</button></li>
-								<li><button onclick="window.location.href='credits.html'">Credits</button></li>
-								<li><button onclick="window.location.href='https://open.spotify.com/artist/0USg6VGxyTCghZFPGRKBwL'"><i class = "fa fa-spotify" style="font-size:100%"></i></button></li>
-								<li><button onclick="window.location.href='https://www.snapchat.com/add/saadin'"><i class = "fa fa-snapchat" style="font-size:100%"></i></button></li>
-								<li><button onclick="window.location.href='https://www.instagram.com/saadindassum/'"><i class="fa fa-instagram" style="font-size:100%"></i></button></li>
-								<li><button onclick="window.location.href='https://www.facebook.com/Saadin-Dassum-366472384219722/'"><i class="fa fa-facebook" style="font-size:100%"></i></button></li>
-								<li><button onclick="window.location.href='https://www.youtube.com/channel/UC_ua_8RskZGWc5y7R-dwXCg'"><i class="fa fa-youtube" style="font-size:100%"></i></button></li>
-								<li><button onclick="window.location.href='https://soundcloud.com/saadin-dassum'"><i class="fa fa-soundcloud" style="font-size:100%"></i></button></li>
-							</ul>
-						</nav>
-					</div>
-				</header>
-				<!--End of Desktop Header-->
-			</section>
-			<main>
-				<section>
-					<div id="separator"></div>
-					<p class="bigtext" style="text-align:center;margin:5%">Watch "<span class="rage">Glasgow Lady</span>", out now!</p>
-						<iframe class="smallPlayer" src="https://www.youtube.com/embed/vtEZJTofRwg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<div id="streamNow" style="text-align:center">
-							<p class="bigtext">STREAM HERE!</p>
-							<span style="font-size:60px">
-							<a href="https://music.apple.com/us/album/glasgow-lady-single/1469502042?uo=4&app=music&at=1001lry3&ct=dashboard"><i class= "fa fa-apple" style="color:white"></i></a>
-							<a href="https://open.spotify.com/album/5tzplH4V0kvvwO5MwUAM96"><i class = "fa fa-spotify" style="color:#1ed761"></i></a>
-							<a href="https://www.amazon.com/dp/B07TCKH2N4/ref=cm_sw_em_r_mt_dp_U_OMpgDbFFJW1E2"><i class = "fa fa-amazon" style="font-size:90%;color:white"></i></a>
-							</span>
-							<p>Don't see your streaming service? <a href="http://hyperurl.co/glasStream" style="color:#1a75ff;text-decoration:none">Click here!</a></p>
-						</div>
-						<!--End of real content-->
-						<footer>
-							<div>
-								<p class="smalltext">© Saadin Dassum 2019</p>
-								<button onclick="window.location.href='https://open.spotify.com/artist/0USg6VGxyTCghZFPGRKBwL'"><i class = "fa fa-spotify" style="font-size:100%"></i></button>
-								<button onclick="window.location.href='https://www.snapchat.com/add/saadin'"><i class = "fa fa-snapchat" style="font-size:100%"></i></button>
-								<button onclick="window.location.href='https://www.instagram.com/saadindassum/'"><i class="fa fa-instagram" style="font-size:100%"></i></button>
-								<button onclick="window.location.href='https://www.facebook.com/Saadin-Dassum-366472384219722/'"><i class="fa fa-facebook" style="font-size:100%"></i></button>
-								<button onclick="window.location.href='https://www.youtube.com/channel/UC_ua_8RskZGWc5y7R-dwXCg'"><i class="fa fa-youtube" style="font-size:100%"></i></button>
-								<button onclick="window.location.href='https://soundcloud.com/saadin-dassum'"><i class="fa fa-soundcloud" style="font-size:100%"></i></button>
-							</div>
-						</footer>
-			</section>
-		</main>
+
+	    <!-- about section start -->
+	    <section class="about" id="about">
+	        <div class="max-width">
+	            <h2 class="title">Saadin Dassum</h2>
+	            <div class="about-content">
+	                <div class="column left">
+	                    <img src="assets/youtubepfp.jpg" alt="">
+	                </div>
+	                <div class="column right">
+	                    <!--div class="text">Rock <span class="typing-2">n' Roll</span></div-->
+	                    <p>This rock and roller has come all the way from the Andes Mountains to explore what it means to be a romantic in the world of a nihilist. Dassum sings about the anxieties of a generation, such as climate change, mental health, and modern intimacy, all while attempting to seek for and inspire hope even in the darkest of times.<br/><br/>
+
+
+Saadin received multiple accolades. Most notably, in 2020, his music video 'Glasgow Lady' was selected as a winner by the Recording Academy (yes, that very same one you're thinking of) and shown at their Grammy U Panel. In 2022, Saadin's animated music video 'Tomorrow' was an official selection of MDC's Miami Film Festival.</p>
+					<a href="assets/saadinEPK.pdf">Download EPK</a>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+	    <!--Miami film section-->
+	    <section class="news" id="news">
+	    	<div class="max-width">
+	    		<h2 class="title">Film Festival Shenanigans</h2>
+	    		<div class="carousel owl-carousel">
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/luncheon.jpg" alt="Saadin at luncheon entrance"/>
+		    				<div class="text">Luncheon Invite</div>
+		    				<p>Can you tell I didn't sleep the night before?</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/tables.jpg" alt="Saadin at luncheon"/>
+		    				<div class="text">Directors Luncheon</div>
+		    				<p>Saadin spews his life philosophy on festival director Jaie Laplante.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/cake.jpg" alt="Delicious cake"/>
+		    				<div class="text">Free cake</div>
+		    				<p>This alone made my two years of sitting and drawing doodles worth it.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/evidence.jpg" alt="Saadin at the carpet"/>
+		    				<div class="text">A selfie for evidence</div>
+		    				<p>More for me than for anyone else really.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/cinemaslam.jpg" alt="Saadin at luncheon entrance"/>
+		    				<div class="text">CinemaSlam</div>
+		    				<p>The red carpet at the Tower Theater, where 'Tomorrow' was shown.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/festivalKey.jpg" alt="Key at festival"/>
+		    				<div class="text">Casa Florida</div>
+		    				<p>'Tomorrow' star Key enjoys a drink at Casa Florida with director Saadin.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/chaad.jpg" alt="Chandler Swirl and Saadin"/>
+		    				<div class="text">Chandler Swirl</div>
+		    				<p>Short for Charles Handler. He plays the drums.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/karla.jpg" alt="Karla Caprali"/>
+		    				<div class="text">Ironside</div>
+		    				<p>Saadin meets fellow animator Karla Caprali at an afterhours party.</p>
+	    				</div>
+	    			</div>
+	    			<div class="card">
+	    				<div class="box">
+		    				<img src="assets/festivalStevie.jpg" alt="Stevie at festival"/>
+		    				<div class="text">Freedom Tower</div>
+		    				<p>Stevie and Saadin at the closing night party.</p>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	
+	    </section>
+
+	    <section class="tomorrow" id="tomorrow">
+	        <div class="max-width">
+	            <h2 class="title">Tomorrow</h2>
+	            <div class="tomorrow-content">
+	                <div class="column left">
+	                    <img src="assets/KeyStevie.png" alt="">
+	                </div>
+	                <div class="column right">
+	                    <div class="text">The year is 203X...</div>
+	                    <p>The mountains look like the Andes... No, the Alps... Both? Oh, wow, they look like both! And what's this little town we're in?
+			    Well, it seems to be Miami's Miracle Mile, but it's cold! I know it's the summertime but you're gonna want a jacket.<br/><br/>
+			    &emsp;So what in the world is going on here?<br/><br/>
+			    Well, everything's perfect. He met her and she met him.<br/>
+			    His name is Key. Because he plays the keys of course. And her name is Stevie because she thinks Fleetwood Mac is always absolutely rockin'. Or at least it seems like her parents did.<br/>
+		    	Key and Stevie are perfect together.<br/><br/>
+		    	Welcome to the world of "Tomorrow".</p>
+					<!--a href="assets/saadinEPK.pdf">Download EPK</a-->
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+		<footer>
+			<span>Created by<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Saadin Dassum </a> 
+				<span class="far fa-copyright">2022 All Rights Reserved.</span>
+				Can you guys believe I've been talking about myself in third person so much? Wow. 
+			</span>
+			<br/>
+			<img src="assets/fullSD.png" alt="Saadin Dassum logo"/>
+		</footer>
+
+		<script type="text/javascript" src="script.js"></script>
 	</body>
 
 </html>
