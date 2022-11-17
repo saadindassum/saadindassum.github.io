@@ -133,7 +133,7 @@ section {
 }
 
 .text-2 span{
-    color: #9ccdff;
+    color: #fabf00;
 }
 
 .home .home-content .text-3 {
@@ -410,6 +410,7 @@ footer img{
     }
     .home .home-content a{
         font-size: 20px;
+    }
 }
 
 @media (max-width: 500px) {
