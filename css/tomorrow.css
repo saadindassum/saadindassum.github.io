@@ -1,5 +1,5 @@
 .tomorrow .title::after {
-    content: "The story goes...";
+    content: "Songwriter's note...";
 }
 
 .tomorrow .tomorrow-content {
