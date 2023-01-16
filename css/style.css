@@ -389,7 +389,7 @@ footer img{
 @media (max-width: 690px) {
     /*690 global*/
     .max-width {
-        padding: 0 23;
+        padding: 23px;
     }
     section .title::before{
         width: 400px;
