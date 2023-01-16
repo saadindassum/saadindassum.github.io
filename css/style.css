@@ -1,0 +1,427 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*global styling*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'sangBold';
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width:  600px;
+    height: 2px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    font-size: 20px;
+    color: #fabf00; 
+    padding: 5px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+section {
+    padding: 100px 0;
+}
+
+.about, .news, .tomorrow, footer {
+    font-family: 'sang';
+}
+
+
+/* home section */
+
+.home {
+    display: flex;
+    background: black;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: sangMed;
+
+}
+
+.color-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+    z-index: 100;
+    overflow: hidden!important;
+}
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    position: relative;
+    font-size:  27px;
+    z-index: 500;
+}
+
+.home .home-content .text-2 {
+    position: relative;
+    font-size:  75px;
+    font-weight: 600;
+    margin-left: -3px;
+    z-index: 500;
+}
+
+.text-2 span{
+    color: #fabf00;
+}
+
+.home .home-content .text-3 {
+    position: relative;
+    font-size:  40px;
+    margin: 5px 0;
+    z-index: 500;
+}
+
+.home .home-content a{
+    position: relative;
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    z-index: 500;
+}
+
+.home .home-content a:hover{
+    color: #fff;
+    background: none;
+}
+
+
+/*About Section Styling*/
+.about .title::after {
+    content: "the Romantic Absurdist";
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+/*Download EPK button*/
+.about .about-content .right a{
+    display: inline-block;
+    background: #fabf00;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #fabf00;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: white;
+    background: none;
+}
+
+
+/*Teams styling*/
+
+.news {
+    color: #fff;
+    background: #0f121c;
+}
+
+.news .title::before{
+    background: #fff;
+}
+
+.news .title::after {
+    background: #0f121c;
+    content: "MDC's Miami Film Festival";
+}
+
+.news .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.news .carousel .card:hover {
+    background: #708090;
+}
+
+.news .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.news .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+
+.news .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.news .carousel .card img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5%;
+    border: 5px solid #fabf00;
+    transition: all 0.3s ease;
+}
+
+.news .carousel .card:hover img{
+    border-color: #fabf00;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #fabf00!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active, .owl-dot:hover {
+    background: #fabf00!important;
+}
+
+
+/*footer styling*/
+footer{
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer span a{
+    color: #fabf00;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-top: 25px;
+    height: 80px;
+    width: auto;
+}
+
+
+
+
+
+/* Responsive media query */
+
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+   .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+   }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+
+    .max-width{
+        max-width: 800px;
+    }
+
+    .home .home-content .text-2 {
+        font-size:  70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size:  35px;
+    }
+
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    /*about*/
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+}
+
+@media (max-width: 690px) {
+    /*690 global*/
+    .max-width {
+        padding: 0 23;
+    }
+    section .title::before{
+        width: 400px;
+    }
+
+    section .title::after{
+        font-size: 12px;
+    }
+
+    /*690 home*/
+
+    .home .home-content .text-2 {
+        font-size:  60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size:  32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size:  50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size:  27px;
+    }
+    section .title::before{
+        width: 300px;
+    }
+}
