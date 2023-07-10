@@ -1,0 +1,186 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+:root {
+    --secondary: #fabf00;
+    --primary: #ffffff;
+  }
+
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*global styling*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+section {
+    padding: 100px 0;
+}
+
+/* home section */
+
+.home {
+    display: flex;
+    background: black;
+    height: 75vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: sangMed;
+
+}
+
+/*Project timeline*/
+
+#left-space {
+    width: 3vw;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#artist-identity {
+    margin-left: 5vw;
+}
+
+.project:nth-child(odd) {
+    /*background-color: rgb(129, 129, 234);*/
+    justify-content: center;
+}
+
+.project:nth-child(even) {
+    /*background-color: rgb(238, 78, 78);*/
+    justify-content: space-between;
+}
+
+.project img {
+    position:relative;
+    width: 415px;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+.project img:hover {
+    width: 420px;
+    cursor: pointer;
+}
+
+.project:nth-child(1) img {
+    opacity: 1 !important;
+}
+
+.project:nth-child(3n - 1) img:nth-child(even) {
+    opacity: 0;
+}
+
+.project:nth-child(3n + 1) img:nth-child(odd) {
+    opacity: 0;
+}
+
+footer {
+    font-family: 'sang';
+}
+
+
+/*footer styling*/
+footer{
+    font-family: 'sang';
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer span a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-top: 25px;
+    height: 80px;
+    width: auto;
+}
+
+.hover-audio {
+    display:none;
+}
+
+
+
+
+
+/* Responsive media query */
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 947px) {
+    .home {
+        height: 90vh;
+    }
+    #artist-identity {
+        margin-left: 0vw;
+    }
+}
+
+@media (max-width: 690px) {
+}
+
+@media (max-width: 500px) {
+}

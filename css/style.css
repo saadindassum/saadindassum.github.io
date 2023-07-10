@@ -3,6 +3,11 @@ Amarillo patito: #fabf00
 Blue Grey:  #6699CC
 */
 
+:root {
+    --secondary: #fabf00;
+    --primary: #ffffff;
+}
+
 /* F O N T S */
 @font-face {
     font-family: 'sang';
