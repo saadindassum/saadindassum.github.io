@@ -2,6 +2,7 @@
 
 $('.project-image').mouseover(function() {
     //console.log(this.id);
+    //console.log('Project index: ' + projectMap.get(this.id));
     if (this.id != 'ast') {
         playAudioById(this.id);
         fadeIn(this.id);
@@ -20,19 +21,35 @@ var projectList = document.querySelectorAll('.project-image');
 var projectMap = new Map();
 
 for (i = 0; i < projectList.length; i++) {
-    projectMap.set(projectList[1].id, i);
+    projectMap.set(projectList[i].id, i);
+    //console.log(projectMap);
+    //console.log('getting ' + projectList[i].id + ': ' + projectMap.get(projectList[i].id));
 }
 
 // Set all volumes to 0 (because HTML decided it didn't wanna listen to me)
 
-for (i = 0; i < projectList.length; i++) {
-    try {
-        var sound = document.getElementById(projectList[i].id + '-audio');
-        sound.volume = 0;
-    } catch (e) {
-        console.log('Did not find audio for project ID ' + projectList[i].id);
+function setAllToZero() {
+    for (i = 0; i < projectList.length; i++) {
+        try {
+            var sound = document.getElementById(projectList[i].id + '-audio');
+            sound.volume = 0;
+        } catch (e) {
+            //console.log('Did not find audio for project ID ' + projectList[i].id);
+        }
     }
 }
+
+// function ensureOthersFade(exceptionAudioId) {
+//     for (i = 0; i < projectList.length; i++) {
+//         try {
+//             if (projectList[i].id != exceptionAudioId) {
+//               fadeOut(projectList[i].id);
+//             }
+//         } catch (e) {
+//             console.log('Did not find audio for project ID ' + projectList[i].id);
+//         }
+//     }
+// }
 
 //FADE FUNCTIONALITY
 var faders = new Array(projectList.length);
@@ -41,12 +58,12 @@ var fadingIds = new Array(projectList.length);
 
 function playAudioById(projectId) {
     var sound = document.getElementById(projectId + '-audio');
-    sound.play();
+    sound.play();    
 }
 
 function fadeIn (projectId) {
     var index = projectMap.get(projectId);
-    clearInterval(faders[index])
+    clearInterval(faders[index]);
     clearTimeout(stopTimeouts[index]);
     var sound = document.getElementById(projectId + '-audio');
 
@@ -54,7 +71,6 @@ function fadeIn (projectId) {
 
         try {
           sound.volume += 0.01;
-
         } catch (e) {
             sound.volume = 1;
             clearInterval(faders[index]);
@@ -72,7 +88,6 @@ function fadeOut (projectId) {
 
         try {
           sound.volume -= 0.02;
-
         } catch (e) {
             sound.volume = 0;
             clearInterval(faders[index]);
@@ -90,3 +105,6 @@ function resetSound(projectId) {
     fadingIds[index] = projectId;
     sound.currentTime = 0;
 }
+
+//On startup
+setAllToZero();
