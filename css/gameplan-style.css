@@ -88,19 +88,23 @@ section {
     padding-bottom: 2vh;
 }
 
+.project:nth-child(1) {
+    margin-left: 25vw;
+}
+
 #artist-identity {
     margin-left: 5vw;
 }
 
-.project:nth-child(odd) {
+.project {
     /*background-color: rgb(129, 129, 234);*/
     justify-content: center;
 }
 
-.project:nth-child(even) {
+/*.project:nth-child(even) {*/
     /*background-color: rgb(238, 78, 78);*/
-    justify-content: space-between;
-}
+/*    justify-content: space-between;
+}*/
 
 .project img {
     position:relative;
@@ -114,17 +118,17 @@ section {
     cursor: pointer;
 }
 
-.project:nth-child(1) img {
+/* .project:nth-child(1) img {
     opacity: 1 !important;
-}
+} */
 
-.project:nth-child(3n - 1) img:nth-child(even) {
+/* .project:nth-child(3n - 1) img:nth-child(even) {
     opacity: 0;
-}
+} */
 
-.project:nth-child(3n + 1) img:nth-child(odd) {
+/* .project:nth-child(3n + 1) img:nth-child(odd) {
     opacity: 0;
-}
+} */
 
 footer {
     font-family: 'sang';
@@ -174,7 +178,7 @@ footer img{
     .home {
         height: 90vh;
     }
-    #artist-identity {
+    #first {
         margin-left: 0vw;
     }
 }

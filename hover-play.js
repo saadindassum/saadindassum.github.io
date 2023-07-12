@@ -1,63 +1,92 @@
-var code = "ris";
-//you can automate these to play by code
-var audio = document.getElementById(code + "-audio");
-audio.volume = 0;
+//MOUSEOVER FUNCTIONALITY
 
-var image = document.getElementById(code + "-image");
+$('.project-image').mouseover(function() {
+    //console.log(this.id);
+    if (this.id != 'ast') {
+        playAudioById(this.id);
+        fadeIn(this.id);
+    }
 
-image.onmouseover = function() {
-    audio.play();
-    fadeIn('ris-audio');
+ });
+
+ $('.project-image').mouseleave(function() {
+    //console.log("left " + this.id);
+    if (this.id != 'ast') {
+        fadeOut(this.id);
+    }
+ });
+
+var projectList = document.querySelectorAll('.project-image');
+var projectMap = new Map();
+
+for (i = 0; i < projectList.length; i++) {
+    projectMap.set(projectList[1].id, i);
 }
 
-image.onmouseleave = function() {
-    fadeOut('ris-audio');
+// Set all volumes to 0 (because HTML decided it didn't wanna listen to me)
+
+for (i = 0; i < projectList.length; i++) {
+    try {
+        var sound = document.getElementById(projectList[i].id + '-audio');
+        sound.volume = 0;
+    } catch (e) {
+        console.log('Did not find audio for project ID ' + projectList[i].id);
+    }
 }
 
 //FADE FUNCTIONALITY
+var faders = new Array(projectList.length);
+var stopTimeouts = new Array(projectList.length);
+var fadingIds = new Array(projectList.length);
 
-var fader;
-var stopTimeout;
+function playAudioById(projectId) {
+    var sound = document.getElementById(projectId + '-audio');
+    sound.play();
+}
 
-function fadeIn (audiosnippetId) {
-    clearInterval(fader);
-    clearTimeout(stopTimeout);
-    var sound = document.getElementById(audiosnippetId);
+function fadeIn (projectId) {
+    var index = projectMap.get(projectId);
+    clearInterval(faders[index])
+    clearTimeout(stopTimeouts[index]);
+    var sound = document.getElementById(projectId + '-audio');
 
-    fader = setInterval(function () {
+    faders[index] = setInterval(function () {
 
         try {
-          sound.volume += 0.02;
+          sound.volume += 0.01;
 
         } catch (e) {
             sound.volume = 1;
-            clearInterval(fader);
+            clearInterval(faders[index]);
         }
     }, 10);
 }
 
 
-function fadeOut (audiosnippetId) {
-    clearInterval(fader);
-    var sound = document.getElementById(audiosnippetId);
+function fadeOut (projectId) {
+    var index = projectMap.get(projectId);
+    clearInterval(faders[index]);
+    var sound = document.getElementById(projectId + '-audio');
 
-    fader = setInterval(function () {
+    faders[index] = setInterval(function () {
 
         try {
           sound.volume -= 0.02;
 
         } catch (e) {
             sound.volume = 0;
-            clearInterval(fader);
+            clearInterval(faders[index]);
             sound.pause();
-            stopTimeout = setTimeout(function() {
-                resetSound(audiosnippetId);
+            stopTimeouts[index] = setTimeout(function() {
+                resetSound(projectId);
             }, 2000);
         }
     }, 10);
 }
 
-function resetSound(audiosnippetId) {
-    var sound = document.getElementById(audiosnippetId);
+function resetSound(projectId) {
+    var index = projectMap.get(projectId);
+    var sound = document.getElementById(projectId + '-audio');
+    fadingIds[index] = projectId;
     sound.currentTime = 0;
 }
