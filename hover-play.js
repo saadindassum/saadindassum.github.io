@@ -1,8 +1,9 @@
 //MOUSEOVER FUNCTIONALITY
 
-$('.project-image').mouseover(function() {
+$('.image-stack').mouseover(function() {
     //console.log(this.id);
     //console.log('Project index: ' + projectMap.get(this.id));
+    fadeInGlow(this.id);
     if (this.id != 'ast') {
         playAudioById(this.id);
         fadeIn(this.id);
@@ -10,14 +11,15 @@ $('.project-image').mouseover(function() {
 
  });
 
- $('.project-image').mouseleave(function() {
-    //console.log("left " + this.id);
+ $('.image-stack').mouseleave(function() {
+    fadeOutGlow(this.id);
     if (this.id != 'ast') {
         fadeOut(this.id);
     }
  });
 
-var projectList = document.querySelectorAll('.project-image');
+var projectList = document.querySelectorAll('.image-stack');
+var images = document.getElementsByClassName("glow-image");
 var projectMap = new Map();
 
 for (i = 0; i < projectList.length; i++) {
@@ -53,6 +55,7 @@ function setAllToZero() {
 
 //FADE FUNCTIONALITY
 var faders = new Array(projectList.length);
+var imageFaders = new Array(projectList.length);
 var stopTimeouts = new Array(projectList.length);
 var fadingIds = new Array(projectList.length);
 
@@ -62,7 +65,9 @@ function playAudioById(projectId) {
 }
 
 function fadeIn (projectId) {
+    //console.log('attempting fade-in');
     var index = projectMap.get(projectId);
+    //console.log('index: ' + index);
     clearInterval(faders[index]);
     clearTimeout(stopTimeouts[index]);
     var sound = document.getElementById(projectId + '-audio');
@@ -87,7 +92,7 @@ function fadeOut (projectId) {
     faders[index] = setInterval(function () {
 
         try {
-          sound.volume -= 0.02;
+          sound.volume = parseFloat(image.style.opacity) - 0.02;
         } catch (e) {
             sound.volume = 0;
             clearInterval(faders[index]);
@@ -95,6 +100,51 @@ function fadeOut (projectId) {
             stopTimeouts[index] = setTimeout(function() {
                 resetSound(projectId);
             }, 2000);
+        }
+    }, 10);
+}
+
+function fadeInGlow(projectId) {
+    //console.log('attempting fadeInGlow');
+    var index = projectMap.get(projectId);
+    //console.log('index: ' + index);
+    clearInterval(imageFaders[index]);
+    var image = document.getElementById(projectId + '-glow');
+    //console.log('opacity: ' + image.style.opacity);
+    imageFaders[index] = setInterval(function () {
+
+        try {
+          image.style.opacity = parseFloat(image.style.opacity) + 0.1;
+          if (image.style.opacity >= 1) {
+            image.style.opacity = 1;
+            clearInterval(imageFaders[index]);
+          }
+        } catch (e) {
+            image.style.opacity = 1;
+            clearInterval(imageFaders[index]);
+        }
+    }, 10);
+
+    // image.style.opacity += 0.5;
+    // console.log('opacity: ' + image.style.opacity);
+}
+
+function fadeOutGlow(projectId) {
+    var index = projectMap.get(projectId);
+    clearInterval(imageFaders[index]);
+    var image = document.getElementById(projectId + '-glow');
+
+    imageFaders[index] = setInterval(function () {
+
+        try {
+          image.style.opacity -= 0.02;
+          if (image.style.opacity <= 0) {
+            image.style.opacity = 0;
+            clearInterval(imageFaders[index]);
+          }
+        } catch (e) {
+            image.style.opacity = 0;
+            clearInterval(imageFaders[index]);
         }
     }, 10);
 }
