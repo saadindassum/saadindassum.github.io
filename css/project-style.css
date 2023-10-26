@@ -1,0 +1,70 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+:root {
+    --secondary: #fabf00;
+    --primary: #ffffff;
+    --title-image-size: 440px;
+    --hover-title-size: 450px;
+  }
+
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
+  /* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*global styling*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url("../gameplan-assets/mrc/mrc-bg.png");
+    background-color: black;
+    color: white;
+}
+
+section {
+    padding: 100px 0;
+}
