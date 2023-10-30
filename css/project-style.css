@@ -5,9 +5,11 @@ Blue Grey:  #6699CC
 
 :root {
     --secondary: #fabf00;
+    --grey: #333333;
     --primary: #ffffff;
     --title-image-size: 440px;
     --hover-title-size: 450px;
+    --transition-time: 500ms;
   }
 
 .title {
@@ -55,12 +57,10 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 .max-width {
     max-width: 1300px;
-    padding: 0 80px;
     margin: auto;
     overflow-x: hidden;
 }
@@ -102,10 +102,99 @@ body {
 
 #foreword div {
     text-align: left;
-    max-width: 1080px;
+    max-width: 1300px;
     margin: auto;
     padding: 10px;
 }
+
+/*song section styling*/
+
+#songs {
+    margin-bottom: 25px;
+}
+
+.song-thumbnail {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border: 3px solid var(--grey);
+    transition: var(--transition-time);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#centerpiece {
+    height: 350px;
+}
+
+.supporting-song {
+    height: 300px;
+}
+
+.song-thumbnail:hover {
+    border: 3px solid var(--secondary);
+}
+
+.song-thumbnail img {
+    width: 100%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: var(--transition-time);
+    object-fit: cover;
+}
+
+.song-thumbnail img:hover {
+    /* width: 102%; */
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.song-thumbnail p {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -105%);
+    transition: var(--transition-time);
+    text-shadow: 1px 1px black;
+    opacity: 0.2;
+}
+
+.song-thumbnail:hover p {
+    color: var(--secondary);
+    opacity: 1;
+}
+
+#centerpiece p {
+    font-size: 45px;
+}
+
+.supporting-song p {
+    font-size: 40px;
+}
+
+#supporting-songs {
+    margin-top: 25px;
+}
+
+#supporting-songs .song-thumbnail {
+    width: 49%;
+    float: left;
+    margin-bottom: 25px;
+}
+
+#supporting-songs .song-thumbnail:nth-child(odd) {
+    margin-right: 2%;
+}
+
+/*track listing styling*/
+#track-listing {
+    margin-bottom: 25px;
+}
+
+/* ol {
+    list-style-type: decimal !important;
+} */
 
 /*footer styling*/
 footer{
