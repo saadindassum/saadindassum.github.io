@@ -88,18 +88,18 @@
 		<!--S O N G S  S E C T I O N  S T A R T-->
 		<section id="songs">
 			<div id="centerpiece" class="max-width song-thumbnail">
-				<img src="../gameplan-assets/mrc/mrc-thumb.png">
+				<img src="../gameplan-assets/mrc/mrc-thumb.png" alt="mrc-thumb.png">
 				<!--Note: in final form, all non-logo images must be jpgs. This png is for demo purposes only.-->
-				<p>The Mercy of the Moon</p>
+				<p>THE MERCY OF THE MOON</p>
 			</div>
 			<div id="supporting-songs" class="max-width">
-				<div class="song-thumbnail supporting-song">
-					<img src="../gameplan-assets/mrc/mfd-thumb.jpg">
-					<p>Made For Dancing</p>
+				<div id="mfd" class="song-thumbnail supporting-song">
+					<img src="../gameplan-assets/mrc/mfd-thumb.jpg" alt="mfd-thumb.jpg">
+					<p>MADE FOR DANCING</p>
 				</div>
-				<div class="song-thumbnail supporting-song">
-					<img src="../gameplan-assets/mrc/mrn-thumb.jpg">
-					<p>Mornings</p>
+				<div id="mrn" class="song-thumbnail supporting-song">
+					<img src="../gameplan-assets/mrc/mrn-thumb.jpg" alt="mrn-thumb.jpg">
+					<p>MORNINGS</p>
 				</div>
 			</div>
 		</section>
@@ -107,11 +107,27 @@
 
 		<!--T R A C K  L I S T  S E C T I O N  S T A R T-->
 		<section id="track-listing" class="max-width">
-			<ol>
-				<li>Made For Dancing</li>
-				<li>Mornings</li>
-				<li>The Mercy of the Moon</li>
-			</ol>
+			<h1>Track Listing</h1>
+			<p>
+				1. Made For Dancing<br>
+				2. Mornings<br>
+				3. The Mercy of the Moon
+				<!-- If it's the last item on the list, don't add a BR
+				This could happen if the list is shorter than 6 and if the item is item 6 -->
+				<!--4. The Mercy of the Moon<br>
+				5. The Mercy of the Moon<br>
+				6. The Mercy of the Moon<br-->
+			</p>
+			<!-- We have up to 6 tracks per p tag, then we float left in the CSS -->
+			<!-- And before you ask, the ol tag is acting funky and I have no clue why -->
+			<!--p>
+				7. Made For Dancing<br>
+				8. Mornigns<br>
+				9. The Mercy of the Moon<br>
+				10. The Mercy of the Moon<br>
+				11. The Mercy of the Moon<br>
+				12. The Mercy of the Moon<br>
+			</p-->
 		</section>
 		<!--T R A C K  L I S T  S E C T I O N  E N D-->
 

@@ -10,6 +10,7 @@ Blue Grey:  #6699CC
     --title-image-size: 440px;
     --hover-title-size: 450px;
     --transition-time: 500ms;
+    font-size: 20px;
   }
 
 .title {
@@ -98,6 +99,7 @@ body {
 
 #foreword {
     text-align: center;
+    margin-bottom: 25px;
 }
 
 #foreword div {
@@ -143,7 +145,7 @@ body {
     object-fit: cover;
 }
 
-.song-thumbnail img:hover {
+.song-thumbnail:hover img {
     /* width: 102%; */
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
@@ -157,7 +159,7 @@ body {
     transform: translate(-50%, -105%);
     transition: var(--transition-time);
     text-shadow: 1px 1px black;
-    opacity: 0.2;
+    opacity: 0;
 }
 
 .song-thumbnail:hover p {
@@ -190,6 +192,22 @@ body {
 /*track listing styling*/
 #track-listing {
     margin-bottom: 25px;
+}
+
+#track-listing h1 {
+    margin-bottom: 15px;
+}
+
+#track-listing  p {
+    width: 49%;
+    float: left;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+#track-listing p:nth-child(odd) {
+    margin-right: 2%;
 }
 
 /* ol {
