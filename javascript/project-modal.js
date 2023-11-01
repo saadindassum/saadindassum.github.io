@@ -1,4 +1,4 @@
-const ModalWindow = {
+const ProjectModalWindow = {
     init() {
         document.body.addEventListener("click", e => {
             if (e.target.classList.contains("modal__close")) {
@@ -40,11 +40,11 @@ const ModalWindow = {
         document.body.removeChild(modalOverlay);
     },
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-    ModalWindow.init();
-    // ModalWindow.openModal({
-    //     title: 'READ ME',
-    //     content: '&emsp;Welcome to the GAMEPLAN site. GAMEPLAN includes future Saadin Dassum releases and marketing plans. By accessing this section of the site, you are agreeing not to share it or the content within, including any unreleased material linked to by the site. All intellectual property on this site belongs to Saadin Dassum. For any inquiries, please get in touch with Saadin Dassum.<br><br>&emsp;Other than that, PC users, make sure your volume\'s on, and feel free to explore!'
-    // });
-});
+// console.log('lmao');
+// document.addEventListener("DOMContentLoaded", () => {
+//     ProjectModalWindow.init();
+//     ProjectModalWindow.openModal({
+//         title: 'READ ME',
+//         content: '&emsp;Welcome to the GAMEPLAN site. GAMEPLAN includes future Saadin Dassum releases and marketing plans. By accessing this section of the site, you are agreeing not to share it or the content within, including any unreleased material linked to by the site. All intellectual property on this site belongs to Saadin Dassum. For any inquiries, please get in touch with Saadin Dassum.<br><br>&emsp;Other than that, PC users, make sure your volume\'s on, and feel free to explore!'
+//     });
+// });
