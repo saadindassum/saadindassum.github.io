@@ -189,6 +189,12 @@ body {
     margin-right: 2%;
 }
 
+/* release date styling */
+#release-date {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 /*track listing styling*/
 #track-listing {
     margin-bottom: 25px;

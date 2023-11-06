@@ -104,7 +104,11 @@
 			</div>
 		</section>
 		<!--S O N G S  S E C T I O N  E N D-->
-
+		<!--R E L E A S E  D A T E-->
+		<section id="release-date">
+			<h2>Coming August 16, 2024</h2>
+		</section>
+		<!--R E L E A S E  D A T E  E N D-->
 		<!--T R A C K  L I S T  S E C T I O N  S T A R T-->
 		<section id="track-listing" class="max-width">
 			<h1>Track Listing</h1>
@@ -128,8 +132,15 @@
 			<br>
 		</footer>
 		<script src="../script.js"></script>
-		<script src="../javascript/project-modal.js">
+		<script crossorigin type="module">
+			import ProjectModal from 'https://saadindassum.com/javascript/project-modal.js';
+			const mrcModal = new ProjectModal("../gameplan-assets/mrc/mrc-thumb.png", "The Mercy of the Moon", "The Moon. The moon has always been there.", "Through your good times, and through your bad times. But what has it changed? It just keeps on watching you try over and over again. And that's how it will be forever.", "The Mercy of the Moon has the most emotional video ever produced by Saadin Dassum. The plan is for this music video to tour around various film festivals. The song's nostalgic feel can also be exploited in media and television shows through sync deals, which should spread the popularity of the song.", "https://soundcloud.com/sd-demos/the-mercy-of-the-moon-2025/s-DHgQraL7Cht");
+			const mfdModal = new ProjectModal("../gameplan-assets/mrc/mfd-thumb.png", "Made For Dancing", "When it rains, it pours." ,"After what a rough week in his life, Dassum took to writing this peppy anthem of hopelessness. Within a week, his girlfriend had broken up with him and two family members passed away, one in a gruesome manner and right before Dassum's eyes. All the while, Dassum was working himself beyond exhaustion working as a programmer at a Bank, and simultaneously developing two apps and keeping up his musical carreer.\n\nThis song explores a path to disbelief and depression", "This song will have a music video directed by Dassum, focused on a protagonist with a 9-5 who watches everyone other than him achieve their dreams. The plot of the video will follow that of the song pretty closely, with everything filmed on a paper-based old-Hollywood-like set. The plan is to cast Mary Mouser as June a woman who leaves Saadin, and to have her character appear in other videos (musical and promotional) such as Birds, and the 'How To Be A Latin Lover' shorts for Rock in Spanglish.\n\n    Shirts and stickers will be sold with heart shapes labeled 'This heart was made for dancing' along with the SD logo.", "https://soundcloud.com/sd-demos/made-for-dancing-14/s-alXr51xbBtS");
+			const mrnModal = new ProjectModal("../gameplan-assets/mrc/mrn-thumb.png", "I don't wanna get up.", "These words might seem normal or even lazy, but getting up is a struggle when all the thoughts in your head have to do with hopelessness.", "Shirts and stickers can be sold with the words 'Mornings are my hell'.", "https://soundcloud.com/sd-demos/mornings/s-MhIbUaqgtuK");
+			const centerpieceElement = document.getElementById("centerpiece");
+			centerpieceElement.addEventListener("click", e => {
+					mrcModal.openModal();
+        	});
 		</script>
 	</body>
-
 </html>
