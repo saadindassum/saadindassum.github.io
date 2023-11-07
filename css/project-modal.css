@@ -20,21 +20,21 @@
     font-style: normal;
 }
 
-.modal__overlay {
+.modal-overlay {
     z-index: 100;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'sang';
 }
 
-.modal__window {
+.modal-window {
     max-width: 700px;
     height: 80vh;
     background: #333333;
@@ -43,7 +43,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
-.modal__titlebar {
+.modal-titlebar {
     height: 80px;
     background: #333333;
     display: flex; 
@@ -51,13 +51,13 @@
     justify-content: center;
 }
 
-.modal__title {
+.modal-title {
     font-weight: bold;
     color: white;
     font-size: 40px;
 }
 
-.modal__content {
+.modal-content {
     padding: 40px;
     font-size: 25px;
     height: 100%;
@@ -68,14 +68,14 @@
     justify-content: space-around;
 }
 
-.modal__center {
+.modal-center {
     width: 100%;
     text-align: center;
     position: relative;
     bottom: 0;
 }
 
-.modal__button {
+.modal-button {
     background-color: #333333;
     color: white;
     border-radius: 5px;
@@ -85,20 +85,20 @@
     transition: 0.3s ease;
 }
 
-.modal__button:hover {
+.modal-button:hover {
     background-color: #000000;
 }
 
 @media (max-width: 947px) {
-    .modal__window {
+    .modal-window {
         max-width: 800px;
     }
 
-    .modal__content {
+    .modal-content {
         font-size: 18px;
     }
 
-    .modal__button {
+    .modal-button {
         font-size: 20px;
     }
 }
