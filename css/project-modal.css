@@ -20,6 +20,10 @@
     font-style: normal;
 }
 
+:root {
+    --window-height: 80vh;
+  }
+
 .modal-overlay {
     z-index: 100;
     position: fixed;
@@ -37,15 +41,30 @@
 .modal-window {
     max-width: 700px;
     height: 80vh;
-    background: #333333;
+    background: rgba(51, 51, 51, 0);
     border: white;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#modal-background {
+    max-width: 700px;
+    height: var(--window-height);
+    position: fixed;
+    z-index: -100;
+    overflow: hidden;
+}
+
+#modal-background img {
+    object-fit: cover;
+    height: var(--window-height);
+    opacity: 1;
 }
 
 .modal-titlebar {
     height: 80px;
-    background: #333333;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -54,18 +73,54 @@
 .modal-title {
     font-weight: bold;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
+}
+
+.close-button {
+    font-size: 29px;
+    cursor: pointer;
+    float: right;
 }
 
 .modal-content {
     padding: 40px;
     font-size: 25px;
-    height: 100%;
-    background-color: #7777be;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.youtube-embed {
+    width: 560px;
+    height: 315px;
+}
+
+.music-video {
+    margin-bottom: 25px;
+}
+
+.modal-content h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.merch-img {
+    width: 100%;
+    margin-bottom: 25px;
 }
 
 .modal-center {

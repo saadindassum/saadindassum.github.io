@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /projects/*
 Disallow: /gameplan.html
+Disallow: /gameplan-pages/*
+Disallow: /gameplan-assets/*
