@@ -31,7 +31,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +45,9 @@
     border: white;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
+    border-radius: 10px;
     overflow: hidden;
+    perspective: 1px;
 }
 
 #modal-background {
@@ -64,31 +65,45 @@
 }
 
 .modal-titlebar {
+    background: rgba(0, 0, 0, 0.5);
     height: 80px;
     display: flex; 
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .modal-title {
     font-weight: bold;
     color: white;
     font-size: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.titlebar-container {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
 }
 
 .close-button {
     font-size: 29px;
     cursor: pointer;
-    float: right;
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .modal-content {
-    padding: 40px;
     font-size: 25px;
     height: 95%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -97,6 +112,21 @@
 
 .modal-content::-webkit-scrollbar {
     display: none;
+}
+
+.opaque-modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.see-through {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.9));
+    padding: 40px;
 }
 
 .youtube-embed {
