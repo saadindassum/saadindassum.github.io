@@ -31,7 +31,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@
 }
 
 .modal-titlebar {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     height: 80px;
     display: flex; 
     align-items: center;
