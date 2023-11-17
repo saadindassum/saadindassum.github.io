@@ -1,34 +1,52 @@
 export default class ProjectModal {
-    constructor(/*thisDoc, */banner, songTitle, boldHook, synopsis, marketingPlans, demoLink) {
-        // this.thisDoc = this.thisDoc;
-        this.banner = banner;
+    constructor(bgLink, songTitle, demoLink, centerpieceTitle, centerpieceSynopsis, merchPlans, socialMediaPlans, synopsis = '', merchImg = '') {
+        ///Link to the background image
+        this.bgLink = bgLink;
         this.songTitle = songTitle;
-        this.boldHook = boldHook;
-        this.synopsis = synopsis;
-        this.marketingPlans = marketingPlans;
         this.demoLink = demoLink;
+        this.synopsis = synopsis;
+        ///The main marketing project
+        this.centerpieceTitle = centerpieceTitle;
+        this.centerpieceSynopsis = centerpieceSynopsis;
+        this.merchPlans = merchPlans;
+        this.merchImg = merchImg;
+        this.socialMediaPlans = socialMediaPlans
+        print('Song object created!');
     }
     
     getHtmlTemplate() {
         return `
-            <div class="modal-overlay">
-                <div class="modal-window">
-                    <div class="modal-titlebar">
+        <div class="modal-overlay">
+            <div class="modal-window">
+                <div id="modal-background">
+                    <img src="${this.demoLink}">
+                </div>
+                <div class="modal-titlebar">
+                    <div class="titlebar-container">
                         <span class="modal-title">${this.songTitle}</span>
                     </div>
-                    <div class="modal-content">
-                        <p>&emsp;<strong>${this.boldHook}<strong> ${this.synopsis}</p>
-                        <div class="modal-center">
-                        <button class="modal-close modal-button">Okay!!!</button>
+                    <div class="titlebar-container">
+                        <i class="fa fa-close close-button"></i>
                     </div>
-                    <div class="modal-content">
-                    <p>${this.marketingPlans}</p>
-                    <div class="modal-center">
-                    <button class="modal-close modal-button">Okay!!!</button>
-                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1657573143%3Fsecret_token%3Ds-DHgQraL7Cht&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sd-demos" title="SD Demos" target="_blank" style="color: #cccccc; text-decoration: none;">SD Demos</a> · <a href="https://soundcloud.com/sd-demos/the-mercy-of-the-moon-2025/s-DHgQraL7Cht" title="${this.songTitle}" target="_blank" style="color: #cccccc; text-decoration: none;">The Mercy Of The Moon (2023)</a></div>
                 </div>
+                <div class="modal-content">
+                    <div class="opaque-modal-content">
+                        ${this.getDemoHtml()}
+                        ${this.getSynopsisTag()}
+                        <h3>${this.centerpieceTitle}</h3>
+                        <p>&emsp;${this.centerpieceSynopsis}</p>
+                        <h3>Merch</h3>
+                        <p>${this.merchPlans}.</p>
+                        ${this.getMerchImgTag()}
+                        <h3>Social Media Campaign</h3>
+                        <p>
+                            ${this.socialMediaPlans}
+                        </p>
+                    </div>
+                    <div class="see-through"></div>
                 </div>
             </div>
+        </div>
         `;
     }
 
@@ -50,5 +68,35 @@ export default class ProjectModal {
                 closeModal(e.target);
             }
         });
+    }
+
+    getDemoHtml() {
+        //Basically, we have to determine whether the video is Soundcloud or YouTube.
+        //Soundcloud embed links will start with https://w.soundcloud.com/
+        if (this.demoLink.substring(0, 25) == 'https://w.soundcloud.com') {
+            link = demoLink.substring(0, 114); //We strip the link of any weird attributes
+            return `
+            <iframe class="soundcloud-demo" scrolling="no" frameborder="no" src="${link}&color=%23fafb00&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            `;
+        }
+        return `
+        <div class="modal-video-container">
+            <iframe class="music-video youtube-embed" src="${this.demoLink}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        `;
+    }
+    
+    getSynopsisTag() {
+        if (this.synopsis == '') return ``;
+        return `<p>${this.synopsis}</p>`
+    }
+
+    getMerchImgTag() {
+        if (this.merchImg == '') {
+            return ``;
+        }
+        return `
+            <img class="merch-img" src="${this.merchImg}" alt="mrc-merch.png">
+        `
     }
 }
