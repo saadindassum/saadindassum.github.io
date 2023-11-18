@@ -73,7 +73,7 @@ export default class ProjectModal {
     getDemoHtml() {
         //Basically, we have to determine whether the video is Soundcloud or YouTube.
         //Soundcloud embed links will start with https://w.soundcloud.com/
-        if (this.demoLink.substring(0, 25) == 'https://w.soundcloud.com') {
+        if (this.demoLink.substring(0, 24) == 'https://w.soundcloud.com') {
             link = demoLink.substring(0, 114); //We strip the link of any weird attributes
             return `
             <iframe class="soundcloud-demo" scrolling="no" frameborder="no" src="${link}&color=%23fafb00&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
