@@ -53,7 +53,7 @@ export default class ProjectModal {
     openModal() {
         const modalTemplate = this.getHtmlTemplate();
         document.body.insertAdjacentHTML("afterbegin", modalTemplate);
-        document.body.addEventListeneraddEventListener("click", e => {
+        document.body.addEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
                 closeModal(e.target);
             }
@@ -63,7 +63,7 @@ export default class ProjectModal {
     closeModal(closeButton) {
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
         document.body.removeChild(modalOverlay);
-        document.body.removeEventListeneraddEventListener("click", e => {
+        document.body.removeEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
                 closeModal(e.target);
             }
