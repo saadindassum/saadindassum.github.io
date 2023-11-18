@@ -62,6 +62,7 @@ export default class ProjectModal {
     closeModal(closeButton) {
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
         document.body.removeEventListeneraddEventListener("click", e => {
+            console.log('Class list: ' + e.target.classList);
             if (e.target.classList.contains("modal-close")) {
                 closeModal(e.target);
             }
