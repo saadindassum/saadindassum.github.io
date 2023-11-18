@@ -11,7 +11,7 @@ export default class ProjectModal {
         this.merchPlans = merchPlans;
         this.merchImg = merchImg;
         this.socialMediaPlans = socialMediaPlans
-        print('Song object created!');
+        console.log('Song object created!');
     }
     
     getHtmlTemplate() {
@@ -100,3 +100,4 @@ export default class ProjectModal {
         `
     }
 }
+console.log('Class imported!');
