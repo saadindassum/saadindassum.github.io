@@ -11,7 +11,6 @@ export default class ProjectModal {
         this.merchPlans = merchPlans;
         this.merchImg = merchImg;
         this.socialMediaPlans = socialMediaPlans
-        console.log('Song object created!');
     }
     
     getHtmlTemplate() {
@@ -67,6 +66,7 @@ export default class ProjectModal {
                 closeModal(e.target);
             }
         });
+        console.log(modalOverlay);
         document.body.removeChild(modalOverlay);
     }
 
