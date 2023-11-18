@@ -19,7 +19,7 @@ export default class ProjectModal {
         <div class="modal-overlay">
             <div class="modal-window">
                 <div id="modal-background">
-                    <img src="${this.demoLink}">
+                    <img src="${this.bgLink}">
                 </div>
                 <div class="modal-titlebar">
                     <div class="titlebar-container">
@@ -53,7 +53,7 @@ export default class ProjectModal {
     openModal() {
         const modalTemplate = this.getHtmlTemplate();
         document.body.insertAdjacentHTML("afterbegin", modalTemplate);
-        document.body.addEventListeneraddEventListener("click", e => {
+        document.body.addEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
                 closeModal(e.target);
             }
@@ -62,12 +62,12 @@ export default class ProjectModal {
 
     closeModal(closeButton) {
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
-        document.body.removeChild(modalOverlay);
         document.body.removeEventListeneraddEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
                 closeModal(e.target);
             }
         });
+        document.body.removeChild(modalOverlay);
     }
 
     getDemoHtml() {
