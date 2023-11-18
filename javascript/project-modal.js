@@ -54,7 +54,7 @@ export default class ProjectModal {
         document.body.insertAdjacentHTML("afterbegin", modalTemplate);
         document.body.addEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
-                closeModal(e.target);
+                this.closeModal(e.target);
             }
         });
     }
@@ -64,10 +64,9 @@ export default class ProjectModal {
         document.body.removeEventListeneraddEventListener("click", e => {
             console.log('Class list: ' + e.target.classList);
             if (e.target.classList.contains("modal-close")) {
-                closeModal(e.target);
+                this.closeModal(e.target);
             }
         });
-        console.log(modalOverlay);
         document.body.removeChild(modalOverlay);
     }
 
