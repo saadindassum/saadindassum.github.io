@@ -11,7 +11,6 @@ export default class ProjectModal {
         this.merchPlans = merchPlans;
         this.merchImg = merchImg;
         this.socialMediaPlans = socialMediaPlans
-        console.log('Song object created!');
     }
     
     getHtmlTemplate() {
@@ -19,14 +18,14 @@ export default class ProjectModal {
         <div class="modal-overlay">
             <div class="modal-window">
                 <div id="modal-background">
-                    <img src="${this.demoLink}">
+                    <img src="${this.bgLink}">
                 </div>
                 <div class="modal-titlebar">
                     <div class="titlebar-container">
                         <span class="modal-title">${this.songTitle}</span>
                     </div>
                     <div class="titlebar-container">
-                        <i class="fa fa-close close-button"></i>
+                        <i class="fa fa-close close-button modal-close"></i>
                     </div>
                 </div>
                 <div class="modal-content">
@@ -55,19 +54,20 @@ export default class ProjectModal {
         document.body.insertAdjacentHTML("afterbegin", modalTemplate);
         document.body.addEventListener("click", e => {
             if (e.target.classList.contains("modal-close")) {
-                closeModal(e.target);
+                this.closeModal(e.target);
             }
         });
     }
 
     closeModal(closeButton) {
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
-        document.body.removeChild(modalOverlay);
         document.body.removeEventListener("click", e => {
+            console.log('Class list: ' + e.target.classList);
             if (e.target.classList.contains("modal-close")) {
-                closeModal(e.target);
+                this.closeModal(e.target);
             }
         });
+        document.body.removeChild(modalOverlay);
     }
 
     getDemoHtml() {
