@@ -25,7 +25,7 @@ export default class ProjectModal {
                         <span class="modal-title">${this.songTitle}</span>
                     </div>
                     <div class="titlebar-container">
-                        <i class="fa fa-close close-button"></i>
+                        <i class="fa fa-close close-button modal-close"></i>
                     </div>
                 </div>
                 <div class="modal-content">
