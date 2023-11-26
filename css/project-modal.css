@@ -187,6 +187,7 @@
     background-color: #000000;
 }
 
+/* Media responsive query */
 @media (max-width: 947px) {
     .modal-window {
         max-width: 800px;
@@ -199,19 +200,36 @@
     .modal-button {
         font-size: 20px;
     }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    #modal-background {
+        max-width: none;
+    }
 }
 
-/* Media responsive query */
-@media (max-width: 991px) {
+@media (max-width: 700px) {
     .modal-window {
+        height: 100vh;
+    }
+    
+    #modal-background {
         height: 100vh;
     }
 
     #modal-background img {
         height: 100vh;
+        width: auto;
     }
 
-    .hide-mobile {
-        display: none;
+}
+
+@media (max-width: 600px) {
+
+    .youtube-embed {
+        width: auto;
+        height: auto;
     }
 }

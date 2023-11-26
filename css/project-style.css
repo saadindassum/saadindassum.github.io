@@ -261,7 +261,7 @@ footer img{
         padding: 0;
     }
 
-    .song-thumbnail {
+    #centerpiece {
         height: 300px;
     }
 
@@ -280,12 +280,12 @@ footer img{
         padding: 0;
     }
 
-    .song-thumbnail {
-        height: 200px;
+    .supporting-song {
+        height: 175px;
     }
 
-    .supporting-song {
-        height: 150px;
+    #centerpiece {
+        height: 225px;
     }
 }
 
@@ -294,12 +294,31 @@ footer img{
         max-width: 680px;
         padding: 0;
     }
-    .song-thumbnail {
-        height: 150px;
+
+    #centerpiece {
+        height: 200px;
     }
 
     .supporting-song {
-        height: 100px;
+        height: 150px;
+    }
+
+    .song-thumbnail img {
+        -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(50%);
+    }
+
+    .song-thumbnail p {
+        display: none;
+    }
+
+    #track-listing img {
+        width: 75%;
+    }
+
+    #track-listing  p {
+        width: 90%;
+        float: none;
     }
 }
 
@@ -308,6 +327,10 @@ footer img{
     .max-width {
         margin-left: 23px;
         margin-right: 23px;
+    }
+
+    #track-listing img {
+        width: 90%;
     }
 }
 

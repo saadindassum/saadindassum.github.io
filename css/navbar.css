@@ -143,6 +143,14 @@
 		padding: 0px 0;
 	}
 
+	#logo {
+		padding-top: 15px;
+	}
+
+	.navbar.sticky{
+		padding: 4px 0;
+	}
+
 	.navbar .menu{
 		position: fixed;
 		height: 100vh;
