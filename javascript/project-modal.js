@@ -50,6 +50,8 @@ export default class ProjectModal {
     }
 
     openModal() {
+        var navBar = document.getElementsByTagName('nav')[0];
+        navBar.classList.add('hide-mobile');
         const modalTemplate = this.getHtmlTemplate();
         document.body.insertAdjacentHTML("afterbegin", modalTemplate);
         document.body.addEventListener("click", e => {
@@ -60,6 +62,8 @@ export default class ProjectModal {
     }
 
     closeModal(closeButton) {
+        var navBar = document.getElementsByTagName('nav')[0];
+        navBar.classList.remove('hide-mobile');
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
         document.body.removeEventListener("click", e => {
             console.log('Class list: ' + e.target.classList);
