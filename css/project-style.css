@@ -21,6 +21,7 @@ Blue Grey:  #6699CC
 
 .title img {
     max-width: 1080px;
+    width: 95vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -250,4 +251,66 @@ footer img{
     margin-top: 25px;
     height: 80px;
     width: auto;
+}
+
+/* Responsive media query */
+
+@media (max-width: 1350px) {
+    .max-width {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    .song-thumbnail {
+        height: 300px;
+    }
+
+    .supporting-song {
+        height: 250px;
+    }
+
+    .song-thumbnail img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    .song-thumbnail {
+        height: 200px;
+    }
+
+    .supporting-song {
+        height: 150px;
+    }
+}
+
+@media (max-width: 920px) {
+    .max-width {
+        max-width: 680px;
+        padding: 0;
+    }
+    .song-thumbnail {
+        height: 150px;
+    }
+
+    .supporting-song {
+        height: 100px;
+    }
+}
+
+@media (max-width: 690px) {
+    /*690 global*/
+    .max-width {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+}
+
+@media (max-width: 500px) {
+
 }

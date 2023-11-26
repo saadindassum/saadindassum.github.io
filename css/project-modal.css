@@ -200,3 +200,18 @@
         font-size: 20px;
     }
 }
+
+/* Media responsive query */
+@media (max-width: 991px) {
+    .modal-window {
+        height: 100vh;
+    }
+
+    #modal-background img {
+        height: 100vh;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
