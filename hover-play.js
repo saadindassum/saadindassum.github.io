@@ -88,12 +88,13 @@ function fadeOut (projectId) {
     var index = projectMap.get(projectId);
     clearInterval(faders[index]);
     var sound = document.getElementById(projectId + '-audio');
-
+    var image = document.getElementById(projectId + '-glow');
     faders[index] = setInterval(function () {
 
         try {
           sound.volume = parseFloat(image.style.opacity) - 0.02;
         } catch (e) {
+            console.log('Error caught!' + e);
             sound.volume = 0;
             clearInterval(faders[index]);
             sound.pause();
