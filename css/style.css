@@ -11,21 +11,21 @@ Blue Grey:  #6699CC
 /* F O N T S */
 @font-face {
     font-family: 'sang';
-    src: url(fonts/SangBleuKingdom-Regular.otf);
+    src: url('fonts/SangBleuKingdom-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'sangMed';
-    src: url(fonts/SangBleuKingdom-Medium.otf);
+    src: url('fonts/SangBleuKingdom-Medium.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'sangBold';
-    src: url(fonts/SangBleuKingdom-Bold.otf);
+    src: url('fonts/SangBleuKingdom-Bold.otf');
     font-weight: normal;
     font-style: normal;
 }

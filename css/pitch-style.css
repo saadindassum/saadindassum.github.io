@@ -3,24 +3,73 @@ Amarillo patito: #fabf00
 Blue Grey:  #6699CC
 */
 
+/* Cream purple - c38dbf
+Green - 89c876
+Orange - f9a558
+Blue - 76b9e6
+Extra font: Ink Free */
+
 :root {
     --secondary: #fabf00;
     --grey: #333333;
     --primary: #ffffff;
+    --cream-purple: #c38dbf;
+    --orange: #f9a558;
+    --blue: #76b9e6;
+    --green: #89c876;
     --title-image-size: 440px;
     --hover-title-size: 450px;
     --transition-time: 500ms;
     font-size: 20px;
   }
 
+/* F O N T S */
+@font-face {
+    font-family: 'chalet';
+    src: url('fonts/Chalet.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* F O N T S */
+@font-face {
+    font-family: 'chalktastic';
+    src: url('fonts/Chalktastic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cream-purple {
+    color: var(--cream-purple);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.green {
+    color: var(--green);
+}
+
 body {
+    font-family: 'chalet';
     background-color: black;
     color: var(--primary);
+    overflow: hidden;
   }
 
 h1, h2 {
+    font-family: 'chalktastic';
     text-align: center;
   }
+
+h3 {
+    font-family: 'chalktastic';
+}
 
 section {
     margin-top: 50px;
@@ -33,8 +82,68 @@ section {
     overflow-x: hidden;
 }
 
-.top-left {
-    width: 500px;
+strong {
+    color: var(--orange);
+}
+
+/* for reveal overlay */
+#reveal-overlay {
+    margin-top: 720px;
+}
+
+/*Home section styling*/
+
+#sd-logo {
+    width: 1280px;
+}
+
+#tagline {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* For resume section */
+
+#resume {
+    display: flex;
+}
+
+#summary {
+    border: 8px solid #ffffff;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+#r-left {
+    width: 65%;
+}
+
+#r-right {
+    width: 35%;
+}
+
+.float-left {
+    float: left;
+}
+
+.tiny-image {
+    width: 20%;
+}
+
+#cap-container {
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.chalet-title {
+    font-family: 'chalet';
+}
+
+#gpa {
+    text-align: center;
 }
 
 /* Responsive media query */
