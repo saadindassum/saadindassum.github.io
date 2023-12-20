@@ -71,6 +71,15 @@ h3 {
     font-family: 'chalktastic';
 }
 
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+span {
+    color: var(--orange);
+}
+
 section {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -89,6 +98,7 @@ strong {
 /* for reveal overlay */
 #reveal-overlay {
     margin-top: 720px;
+    z-index: 999;
 }
 
 /*Home section styling*/
@@ -109,10 +119,13 @@ strong {
 }
 
 #summary {
-    border: 8px solid #ffffff;
-    border-radius: 8px;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+.dx-box {
+    border: 8px solid #ffffff;
+    border-radius: 8px;
     padding: 10px;
 }
 
@@ -121,7 +134,8 @@ strong {
 }
 
 #r-right {
-    width: 35%;
+    margin-left: 2%;
+    width: 33%;
 }
 
 .float-left {
@@ -132,10 +146,58 @@ strong {
     width: 20%;
 }
 
+.org-accolade {
+    width: 48%;
+    margin: 0;
+    float: left;
+}
+
+#accolade-padding {
+    width: 4%;
+    height: 10px;
+    float: left;
+}
+
+.accolade-box {
+    height: 300px;
+}
+
+.org-padding {
+    float: left;
+    width: 1%;
+}
+
+.org-image {
+    height: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.accolade-image {
+    float: right;
+    width: 50%;
+}
+
+.roles {
+    width: 48%;
+}
+
+#cap-padding {
+    height: 25px;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
 #cap-container {
     color: white;
     text-align: center;
     padding: 5px;
+    transform: translate(0, -50%);
+    background-color: black;
+    width: 75px;
+    margin: 0 auto;
 }
 
 .chalet-title {
