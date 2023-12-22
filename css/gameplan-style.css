@@ -142,13 +142,6 @@ section {
     opacity: 0;
 } */
 
-footer {
-    position: fixed;
-    width: 100%;
-    font-family: 'sang';
-    bottom: 0;
-}
-
 
 /*footer styling*/
 footer{
@@ -156,6 +149,10 @@ footer{
     padding: 20px 23px;
     text-align: center;
     font-size: 12px;
+    position: fixed;
+    width: 100%;
+    font-family: 'sang';
+    bottom: 0;
 }
 
 footer span a{

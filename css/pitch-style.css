@@ -51,7 +51,7 @@ Extra font: Ink Free */
     color: var(--blue);
 }
 
-.green {
+.chalk-green {
     color: var(--green);
 }
 
@@ -116,6 +116,7 @@ strong {
 
 #resume {
     display: flex;
+    margin-bottom: 100px;
 }
 
 #summary {
@@ -129,11 +130,11 @@ strong {
     padding: 10px;
 }
 
-#r-left {
+.r-left {
     width: 65%;
 }
 
-#r-right {
+.r-right {
     margin-left: 2%;
     width: 33%;
 }
@@ -184,13 +185,18 @@ strong {
     width: 48%;
 }
 
-#cap-padding {
+.resume-icon-padding {
     height: 25px;
     width: 100%;
     border-bottom: 2px solid white;
 }
 
-#cap-container {
+#song-lib-padding {
+    height: 65px;
+    width: 100%;
+}
+
+#cap-container, #vinyl-container {
     color: white;
     text-align: center;
     padding: 5px;
@@ -206,6 +212,35 @@ strong {
 
 #gpa {
     text-align: center;
+}
+
+/*footer styling*/
+footer{
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    font-family: 'sang';
+    bottom: 0;
+}
+
+footer span a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-top: 25px;
+    height: 80px;
+    width: auto;
+}
+
+.hover-audio {
+    display:none;
 }
 
 /* Responsive media query */
