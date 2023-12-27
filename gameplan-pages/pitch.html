@@ -23,10 +23,10 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	</head>
 	<body>
-		<div id="reveal-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 300vh; background-color: black; opacity: 1;"></div>
+		<div id="reveal-overlay" style="opacity: 1;"></div>
 		<section id="home">
+			<img onload="removeOverlay()" src="../assets/logo-animation.gif" alt ='sd-logo-animation.gif' id="sd-logo">
 			<div class="max-width">
-				<img onload="removeOverlay()" src="../assets/logo-animation.gif" alt ='sd-logo-animation.gif' id="sd-logo">
 				<div id="tagline">
 					<h2>storyteller</h2>
 					<h2>dreamer</h2>
@@ -147,11 +147,11 @@
 					<li><span>Me.</span> Making the art I'm making right now but on steroids. I made this site while working on all the demos, and two apps. Imagine what I could pull off when I'm devoted to my artistry.</li><br>
 				</ul>
 			</div>
-			<h2>What's the catch?</h2>
+			<h2 class="pinkish-red">What's the catch?</h2>
 			<div class="max-width">
 				<p>&emsp;Like we programmers like to say, there's no such thing as a free lunch. There's always a catch. And that's why I'd like for you to... invest in a timeshare!<br><br>
 					&emsp;Just kidding, here's the real catch. We're partners in this. 50/50. <em>"But why?"</em>, I hear you ask. Well, I'll be involved in everything, from the art, to the webiste, to the creative desicions. To touring, to practicing, to PR events. My work goes beyond that of writing and producing. While I'm hoping to get resources from the partnership to help execute my ideas, I'll be calling many of the shots for the art to remain authentic, and I'll be providing business and manufacturing connections in Ecuador, the US, and elsewhere.<br><br>
-					&emsp;You're going to work with someone who can put out a memorable, witty, and charismatic image, while remaining an effective and reliable business partner in the office. I love to clown around, but I'm a professional. I deliver on my word (and on my signature, wink wink). When it comes down to brass tacks, I'm willing to sit down, analyze, and take care of a problem.</p><br><br>
+					&emsp;You're going to work with someone who can put out a memorable, witty, and charismatic image, while remaining an effective and reliable business partner in the office. I love to clown around, but I'm a professional. I deliver on my word (and on my signature, wink wink). When it comes down to brass tacks, I'm willing to sit down, analyze, and take care of a problem.</p><br>
 					&emsp;Aside from that, I ask that we work in an environmentally friendly way, and I also ask is that those who helped me with content that's already created get compensated fairly. For example Grant De La Vasselais with various cover arts, and Brandon Hadeed with the Emmamilian language. That's it!
 			</div>
 		</section>
@@ -189,7 +189,7 @@
 			if (parseFloat(overlay.style.opacity) <= 0.2) {
 				clearInterval(loop);
 				overlay.remove();
-				document.getElementsByTagName('body')[0].style.overflow = "scroll";
+				document.getElementsByTagName('body')[0].style.overflowY = "scroll";
 			} else {
 				overlay.style.opacity = parseFloat(overlay.style.opacity) - 0.05;
 			}
