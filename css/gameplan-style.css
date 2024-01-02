@@ -56,6 +56,7 @@ html {
 body {
     background-color: black;
     color: white;
+    padding: 0;
 }
 
 section {
@@ -66,7 +67,6 @@ section {
 
 .home {
     display: flex;
-    background: black;
     height: 75vh;
     color: #fff;
     min-height: 500px;
@@ -208,6 +208,10 @@ footer img{
     .image-stack img {
         height: 100%;
         width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .glow-image {
@@ -218,6 +222,11 @@ footer img{
     background-color: rgb(238, 78, 78);
     justify-content: space-between;
     } */
+
+    /* .project:nth-child(even) .image-stack {
+        background-color: rgb(78, 99, 238);
+        justify-content: space-between;
+    } */
 }
 
 @media (max-width: 947px) {
@@ -227,4 +236,8 @@ footer img{
 }
 
 @media (max-width: 500px) {
+    .project {
+        height: 225px;
+        margin-bottom: 50px;
+    }
 }
