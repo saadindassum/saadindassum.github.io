@@ -1,0 +1,376 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+/* Cream purple - c38dbf
+Green - 89c876
+Orange - f9a558
+Blue - 76b9e6
+Extra font: Ink Free */
+
+:root {
+    --secondary: #fabf00;
+    --grey: #333333;
+    --primary: #ffffff;
+    --cream-purple: #c38dbf;
+    --orange: #f9a558;
+    --blue: #76b9e6;
+    --pinkish-red: #ff5353;
+    --green: #89c876;
+    --title-image-size: 440px;
+    --hover-title-size: 450px;
+    --transition-time: 500ms;
+    font-size: 20px;
+  }
+
+/* F O N T S */
+@font-face {
+    font-family: 'chalet';
+    src: url('fonts/Chalet.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* F O N T S */
+@font-face {
+    font-family: 'chalktastic';
+    src: url('fonts/Chalktastic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cream-purple {
+    color: var(--cream-purple);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.chalk-green {
+    color: var(--green);
+}
+
+.pinkish-red {
+    color: var(--pinkish-red);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'chalet';
+    background-color: black;
+    color: var(--primary);
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+h1, h2 {
+    font-family: 'chalktastic';
+    text-align: center;
+  }
+
+h3 {
+    font-family: 'chalktastic';
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+span {
+    color: var(--orange);
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.max-width {
+    max-width: 1300px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+strong {
+    color: var(--orange);
+}
+
+/* for reveal overlay */
+#reveal-overlay {
+    margin-top: 720px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 300vh;
+    background-color:
+    black;
+}
+
+/*Home section styling*/
+
+#sd-logo {
+    width: 1280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tagline {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* For resume section */
+
+#resume {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#summary {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.dx-box {
+    border: 8px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.r-left {
+    width: 65%;
+}
+
+.r-right {
+    margin-left: 2%;
+    width: 33%;
+}
+
+.float-left {
+    float: left;
+}
+
+.tiny-image {
+    width: 20%;
+}
+
+.org-accolade {
+    width: 48%;
+    margin: 0;
+    float: left;
+}
+
+#accolade-padding {
+    width: 4%;
+    height: 10px;
+    float: left;
+}
+
+.accolade-box {
+    height: 300px;
+}
+
+.org-padding {
+    float: left;
+    width: 1%;
+}
+
+.org-image {
+    height: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.accolade-image {
+    float: right;
+    width: 50%;
+}
+
+.roles {
+    width: 48%;
+}
+
+.resume-icon-padding {
+    height: 25px;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+#song-lib-padding {
+    height: 65px;
+    width: 100%;
+}
+
+#cap-container, #vinyl-container {
+    color: white;
+    text-align: center;
+    padding: 5px;
+    transform: translate(0, -50%);
+    background-color: black;
+    width: 75px;
+    margin: 0 auto;
+}
+
+.chalet-title {
+    font-family: 'chalet';
+}
+
+#gpa {
+    text-align: center;
+}
+
+/*footer styling*/
+footer{
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'sang';
+    bottom: 0;
+}
+
+footer span a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-top: 25px;
+    height: 80px;
+    width: auto;
+}
+
+.hover-audio {
+    display:none;
+}
+
+/* Responsive media query */
+
+@media (max-width: 1350px) {
+    .max-width {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    #reveal-overlay {
+        margin-top: calc(100vw * (720/1280));
+    }
+
+    #resume {
+        margin-bottom: 25px;
+    }
+
+    #home {
+        margin-top: 0px !important;
+    }
+
+    #sd-logo {
+        width: 100%;
+    }
+
+    .org-accolade {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    #resume {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .r-left, .r-right {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .r-left {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 920px) {
+    .max-width {
+        max-width: 680px;
+        padding: 0;
+    }
+
+    .org-accolade {
+        margin-bottom: 25px;
+    }
+
+    #tagline {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 690px) {
+    /*690 global*/
+    .max-width {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+
+    .r-left, .r-right {
+        width: 100%;
+    }
+
+    #track-listing img {
+        width: 90%;
+    }
+
+    .org-accolade {
+        float: none;
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #accolade-padding {
+        width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .org-image {
+        height: 75px;
+    }
+
+    .org-accolade {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 520px) {
+    #tagline {
+        font-size: 11px !important;
+    }
+}
