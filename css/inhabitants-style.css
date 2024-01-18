@@ -78,13 +78,25 @@ h1, h2 {
     text-align: center;
   }
 
+h1 {
+    font-size: 45px;
+}
+
 h3 {
     font-family: 'chalktastic';
 }
 
 a {
-    color: var(--blue);
+    color: var(--secondary);
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    font-style: italic;
 }
 
 span {
@@ -106,20 +118,31 @@ strong {
     color: var(--orange);
 }
 
-/* for reveal overlay */
-#reveal-overlay {
-    margin-top: 720px;
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 300vh;
-    background-color:
-    black;
+/*Home section styling*/
+
+#home {
+    padding-bottom: 25px;
 }
 
-/*Home section styling*/
+.appears-in a {
+    color: var(--green);
+    /* transition: 0.5s ease-in allow-discrete; */
+}
+
+.character img {
+    max-width: 500px;
+    max-height: 450px;
+}
+
+.character:nth-child(odd) img {
+    float: left;
+    padding-right: 50px;
+}
+
+.character:nth-child(even) img {
+    float: right;
+    padding-left: 50px;
+}
 
 #sd-logo {
     width: 1280px;
@@ -133,106 +156,8 @@ strong {
     justify-content: space-between;
 }
 
-/* For resume section */
-
-#resume {
-    display: flex;
-    margin-bottom: 50px;
-}
-
-#summary {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.dx-box {
-    border: 8px solid #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.r-left {
-    width: 65%;
-}
-
-.r-right {
-    margin-left: 2%;
-    width: 33%;
-}
-
-.float-left {
-    float: left;
-}
-
-.tiny-image {
-    width: 20%;
-}
-
-.org-accolade {
-    width: 48%;
-    margin: 0;
-    float: left;
-}
-
-#accolade-padding {
-    width: 4%;
-    height: 10px;
-    float: left;
-}
-
-.accolade-box {
-    height: 300px;
-}
-
-.org-padding {
-    float: left;
-    width: 1%;
-}
-
-.org-image {
-    height: 125px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-}
-
-.accolade-image {
-    float: right;
-    width: 50%;
-}
-
-.roles {
-    width: 48%;
-}
-
-.resume-icon-padding {
-    height: 25px;
-    width: 100%;
-    border-bottom: 2px solid white;
-}
-
-#song-lib-padding {
-    height: 65px;
-    width: 100%;
-}
-
-#cap-container, #vinyl-container {
-    color: white;
-    text-align: center;
-    padding: 5px;
-    transform: translate(0, -50%);
-    background-color: black;
-    width: 75px;
-    margin: 0 auto;
-}
-
 .chalet-title {
     font-family: 'chalet';
-}
-
-#gpa {
-    text-align: center;
 }
 
 /*footer styling*/
