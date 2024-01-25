@@ -146,6 +146,10 @@ body {
     object-fit: cover;
 }
 
+.supporting-song img {
+    height: 100%;
+}
+
 .song-thumbnail:hover img {
     /* width: 102%; */
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
