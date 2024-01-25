@@ -80,7 +80,7 @@ export default class ProjectModal {
         if (this.demoLink.substring(0, 24) == 'https://w.soundcloud.com') {
             var link = this.demoLink.substring(0, 114); //We strip the link of any weird attributes
             return `
-            <iframe class="soundcloud-demo" scrolling="no" frameborder="no" src="${link}&color=%23fafb00&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe class="soundcloud-demo" scrolling="no" frameborder="no" src="${link}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             `;
         }
         return `
