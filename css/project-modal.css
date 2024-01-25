@@ -68,11 +68,13 @@
 
 .modal-titlebar {
     background: rgba(0, 0, 0, 0.9);
-    height: 80px;
+    height: 102px;
     display: flex; 
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .modal-title {

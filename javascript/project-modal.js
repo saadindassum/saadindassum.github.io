@@ -35,7 +35,7 @@ export default class ProjectModal {
                         <h3>${this.centerpieceTitle}</h3>
                         <p>&emsp;${this.centerpieceSynopsis}</p>
                         <h3>Merch</h3>
-                        <p>${this.merchPlans}.</p>
+                        <p>${this.merchPlans}</p>
                         ${this.getMerchImgTag()}
                         <h3>Social Media Campaign</h3>
                         <p>

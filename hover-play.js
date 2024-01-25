@@ -4,7 +4,7 @@ $('.image-stack').mouseover(function() {
     //console.log(this.id);
     //console.log('Project index: ' + projectMap.get(this.id));
     fadeInGlow(this.id);
-    if (this.id != 'ast') {
+    if (this.id != 'ast' && this.id != 'inh') {
         playAudioById(this.id);
         fadeIn(this.id);
     }
@@ -13,7 +13,7 @@ $('.image-stack').mouseover(function() {
 
  $('.image-stack').mouseleave(function() {
     fadeOutGlow(this.id);
-    if (this.id != 'ast') {
+    if (this.id != 'ast' && this.id != 'inh') {
         fadeOut(this.id);
     }
  });

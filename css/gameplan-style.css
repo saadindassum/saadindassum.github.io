@@ -85,6 +85,11 @@ section {
     justify-content: center;
 }
 
+.project:last-child {
+    padding-right: 10vw;
+    padding-left: 4vw;
+}
+
 .project:nth-child(1) {
     margin-left: 12vw;
 }
@@ -216,6 +221,11 @@ footer img{
 
     .glow-image {
         display: none;
+    }
+
+    .project:last-child {
+        padding-right: 0;
+        padding-left: 0;
     }
 
     /* .project:nth-child(even) {

@@ -96,6 +96,11 @@ body {
     padding-top: 100px;
 }
 
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
 /*foreword*/
 
 #foreword {
