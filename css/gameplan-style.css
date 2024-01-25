@@ -1,0 +1,253 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+:root {
+    --secondary: #fabf00;
+    --primary: #ffffff;
+    --title-image-size: 440px;
+    --hover-title-size: 450px;
+  }
+
+
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*global styling*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+    padding: 0;
+}
+
+section {
+    padding: 100px 0;
+}
+
+/* home section */
+
+.home {
+    display: flex;
+    height: 75vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: sangMed;
+
+}
+
+/*Project timeline*/
+
+.project {
+    height: 100%;
+    min-width: var(--hover-title-size);
+    margin-left: 4vw;
+    margin-right: 4vw;
+    /* background-color: rgb(129, 129, 234); */
+    justify-content: center;
+}
+
+.project:last-child {
+    padding-right: 10vw;
+    padding-left: 4vw;
+}
+
+.project:nth-child(1) {
+    margin-left: 12vw;
+}
+
+#artist-identity {
+    margin-left: 4vw;
+}
+
+.project .image-stack {
+    position: relative;
+    width: var(--title-image-size);
+    transition: 0.3s ease;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.project .image-stack:hover {
+    width: var(--hover-title-size);
+    cursor: pointer;
+}
+
+.image-stack img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.image-stack img {
+    width: 100%;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+/* .glow-image {
+    opacity: 0;
+    FAILS ON FIRST JAVASCRIPT FADE-IN
+} */
+
+/* .project:nth-child(1) img {
+    opacity: 1 !important;
+} */
+
+/* .project:nth-child(3n - 1) img:nth-child(even) {
+    opacity: 0;
+} */
+
+/* .project:nth-child(3n + 1) img:nth-child(odd) {
+    opacity: 0;
+} */
+
+
+/*footer styling*/
+footer{
+    font-family: 'sang';
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+    position: fixed;
+    width: 100%;
+    font-family: 'sang';
+    bottom: 0;
+}
+
+footer span a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    margin-top: 25px;
+    height: 80px;
+    width: auto;
+}
+
+.hover-audio {
+    display:none;
+}
+
+
+
+
+
+/* Responsive media query */
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 991px) {
+    .home {
+        height: auto;
+        display: block;
+    }
+
+    #first {
+        margin-left: 0vw;
+    }
+
+    .project {
+        display: block;
+        min-width: none;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 25px;
+    }
+
+    footer{
+        position: static;
+    }
+
+    .image-stack {
+        height: 100%;
+        width: 100vw;
+    }
+
+    .image-stack img {
+        height: 100%;
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .glow-image {
+        display: none;
+    }
+
+    .project:last-child {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* .project:nth-child(even) {
+    background-color: rgb(238, 78, 78);
+    justify-content: space-between;
+    } */
+
+    /* .project:nth-child(even) .image-stack {
+        background-color: rgb(78, 99, 238);
+        justify-content: space-between;
+    } */
+}
+
+@media (max-width: 947px) {
+}
+
+@media (max-width: 690px) {
+}
+
+@media (max-width: 500px) {
+    .project {
+        height: 225px;
+        margin-bottom: 50px;
+    }
+}

@@ -36,7 +36,7 @@
 }
 
 .navbar .menu li a:hover{
-	color: #fabf00;
+	color: var(--secondary);
 }
 
 .navbar.sticky .menu li a:hover{
@@ -138,6 +138,18 @@
 /* Responsive media query */
 
 @media (max-width: 947px) {
+
+	.navbar {
+		padding: 0px 0;
+	}
+
+	#logo {
+		padding-top: 15px;
+	}
+
+	.navbar.sticky{
+		padding: 4px 0;
+	}
 
 	.navbar .menu{
 		position: fixed;

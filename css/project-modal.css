@@ -1,0 +1,237 @@
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --window-height: 80vh;
+  }
+
+.modal-overlay {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'sang';
+}
+
+.modal-window {
+    max-width: 700px;
+    height: 80vh;
+    max-height: 1200px;
+    background: rgba(51, 51, 51, 0);
+    border: white;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1px;
+}
+
+#modal-background {
+    max-width: 700px;
+    height: var(--window-height);
+    position: fixed;
+    z-index: -100;
+    overflow: hidden;
+}
+
+#modal-background img {
+    object-fit: cover;
+    /* height: var(--window-height); */
+    width: 100%;
+    opacity: 1;
+}
+
+.modal-titlebar {
+    background: rgba(0, 0, 0, 0.9);
+    height: 102px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.titlebar-container {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+}
+
+.close-button {
+    font-size: 29px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.modal-content {
+    font-size: 25px;
+    height: 95%;
+    align-items: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.opaque-modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.see-through {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.9));
+    padding: 40px;
+}
+
+.soundcloud-demo {
+    max-height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.youtube-embed {
+    width: 560px;
+    height: 315px;
+}
+
+.music-video {
+    margin-bottom: 25px;
+}
+
+.modal-content h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.modal-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.merch-img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.modal-center {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.modal-button {
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    padding: 8px;
+    transition: 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #000000;
+}
+
+/* Media responsive query */
+@media (max-width: 947px) {
+    .modal-window {
+        max-width: 800px;
+    }
+
+    .modal-content {
+        font-size: 18px;
+    }
+
+    .modal-button {
+        font-size: 20px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    #modal-background {
+        max-width: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal-window {
+        height: 100vh;
+    }
+    
+    #modal-background {
+        height: 100vh;
+    }
+
+    #modal-background img {
+        height: 100vh;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .youtube-embed {
+        width: auto;
+        height: auto;
+    }
+}

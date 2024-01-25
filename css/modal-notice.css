@@ -1,0 +1,104 @@
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url(fonts/SangBleuKingdom-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url(fonts/SangBleuKingdom-Medium.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url(fonts/SangBleuKingdom-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.modal__overlay {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'sang';
+}
+
+.modal__window {
+    max-width: 700px;
+    height: 80vh;
+    background: #333333;
+    border: white;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.modal__titlebar {
+    height: 80px;
+    background: #333333;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__title {
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+}
+
+.modal__content {
+    padding: 40px;
+    font-size: 25px;
+    height: 100%;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modal__center {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.modal__button {
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    padding: 8px;
+    transition: 0.3s ease;
+}
+
+.modal__button:hover {
+    background-color: #000000;
+}
+
+@media (max-width: 947px) {
+    .modal__window {
+        max-width: 800px;
+    }
+
+    .modal__content {
+        font-size: 18px;
+    }
+
+    .modal__button {
+        font-size: 20px;
+    }
+}
