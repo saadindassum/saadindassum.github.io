@@ -222,22 +222,6 @@ footer img{
         max-width: 900px;
         padding: 0;
     }
-
-    #resume {
-        display: block;
-        margin-bottom: 0;
-    }
-
-    .r-left, .r-right {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-    }
-
-    .r-left {
-        margin-bottom: 25px;
-    }
 }
 
 @media (max-width: 920px) {
@@ -253,6 +237,24 @@ footer img{
     #tagline {
         font-size: 15px !important;
     }
+
+    .character:nth-child(odd) img {
+        float: none;
+        padding-right: 0;
+    }
+    
+    .character:nth-child(even) img {
+        float: none;
+        padding-left: 0;
+    }
+
+    .character img {
+        float: none;
+        padding-right: 0;
+        padding-bottom: 25px;
+        display: block;
+        margin: auto;
+    }
 }
 
 @media (max-width: 690px) {
@@ -260,26 +262,6 @@ footer img{
     .max-width {
         margin-left: 23px;
         margin-right: 23px;
-    }
-
-    .r-left, .r-right {
-        width: 100%;
-    }
-
-    #track-listing img {
-        width: 90%;
-    }
-
-    .org-accolade {
-        float: none;
-        width: 75%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #accolade-padding {
-        width: 0;
     }
 }
 

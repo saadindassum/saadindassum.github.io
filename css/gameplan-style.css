@@ -184,6 +184,9 @@ footer img{
 }
 
 @media (max-width: 991px) {
+    body {
+        overflow-x: hidden;
+    }
     .home {
         height: auto;
         display: block;
@@ -196,9 +199,11 @@ footer img{
     .project {
         display: block;
         min-width: none;
-        width: 100%;
+        width: 100vw;
         height: 250px;
         margin-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     footer{
@@ -207,7 +212,7 @@ footer img{
 
     .image-stack {
         height: 100%;
-        width: 100vw;
+        width: 100%;
     }
 
     .image-stack img {
