@@ -190,6 +190,8 @@ footer img{
     .home {
         height: auto;
         display: block;
+        width: 100vw;
+        padding-bottom: 15px;
     }
 
     #first {
@@ -198,26 +200,26 @@ footer img{
 
     .project {
         display: block;
-        min-width: none;
-        width: 100vw;
+        min-width: 0;
+        width: 100%;
         height: 250px;
         margin-bottom: 25px;
         margin-left: 0;
         margin-right: 0;
     }
 
+    .project .image-stack {
+        width: 100%;
+        height: 100%;
+    }
+
     footer{
         position: static;
     }
 
-    .image-stack {
-        height: 100%;
-        width: 100%;
-    }
-
     .image-stack img {
-        height: 100%;
-        width: auto;
+        width: 95%;
+        height: auto;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -229,8 +231,7 @@ footer img{
     }
 
     .project:last-child {
-        padding-right: 0;
-        padding-left: 0;
+        display: none;
     }
 
     /* .project:nth-child(even) {

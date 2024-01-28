@@ -1,6 +1,7 @@
 //MOUSEOVER FUNCTIONALITY
 
 $('.image-stack').mouseover(function() {
+    if (window.innerWidth < 992) return;
     //console.log(this.id);
     //console.log('Project index: ' + projectMap.get(this.id));
     fadeInGlow(this.id);
