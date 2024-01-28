@@ -17,6 +17,7 @@
 
 .navbar .max-width {
 	display: flex;
+	padding: 0 !important;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -144,7 +145,7 @@
 	}
 
 	.navbar .max-width {
-		padding: 0 5vw !important
+		padding: 0 7vw !important
 	}
 
 	#logo {
