@@ -218,7 +218,8 @@
 
 @media (max-width: 700px) {
     .modal-window {
-        height: 100vh;
+        height: 98vh;
+        width: 95vw;
     }
     
     #modal-background {
