@@ -62,7 +62,7 @@ export default class ProjectModal {
         document.addEventListener("keydown", function (e) {
             if (e.key == "Escape")  {
                 var closeButton = this.getElementsByClassName("close-button")[0];
-                this.closeModal(closeButton);
+                closeModal(closeButton);
             }
         });
     }
