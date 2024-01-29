@@ -25,7 +25,7 @@
   }
 
 .modal-overlay {
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -190,9 +190,22 @@
 }
 
 /* Media responsive query */
+
+@media (max-width: 1920px) {
+    .modal-window {
+        max-width: 600px;
+        height: 98vh
+    }
+
+    #modal-background {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 947px) {
     .modal-window {
         max-width: 800px;
+        height: 80vh
     }
 
     .modal-content {
@@ -220,10 +233,6 @@
     .modal-window {
         height: 98vh;
         width: 95vw;
-    }
-    
-    #modal-background {
-        height: 100vh;
     }
 
     #modal-background img {
