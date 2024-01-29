@@ -62,7 +62,7 @@ export default class ProjectModal {
         });
         document.addEventListener("keydown", function (e) {
             if (e.key == "Escape")  {
-                var closeButton = getElementsByClassName("close-button")[0];
+                var closeButton = document.getElementsByClassName("close-button")[0];
                 thisClass.closeModal(closeButton);
             }
         });
@@ -82,7 +82,7 @@ export default class ProjectModal {
         document.body.removeChild(modalOverlay);
         document.addEventListener("keydown", function (e) {
             if (e.key == "Escape")  {
-                var closeButton = getElementsByClassName("close-button")[0];
+                var closeButton = document.getElementsByClassName("close-button")[0];
                 thisClass.closeModal(closeButton);
             }
         });
