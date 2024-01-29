@@ -50,6 +50,7 @@ export default class ProjectModal {
     }
 
     openModal() {
+        var thisClass = this;
         var navBar = document.getElementsByTagName('nav')[0];
         navBar.classList.add('hide-mobile');
         const modalTemplate = this.getHtmlTemplate();
@@ -61,13 +62,14 @@ export default class ProjectModal {
         });
         document.addEventListener("keydown", function (e) {
             if (e.key == "Escape")  {
-                var closeButton = this.getElementsByClassName("close-button")[0];
-                closeModal(closeButton);
+                var closeButton = getElementsByClassName("close-button")[0];
+                thisClass.closeModal(closeButton);
             }
         });
     }
 
     closeModal(closeButton) {
+        var thisClass = this;
         var navBar = document.getElementsByTagName('nav')[0];
         navBar.classList.remove('hide-mobile');
         const modalOverlay = closeButton.parentElement.parentElement.parentElement.parentElement;
@@ -78,10 +80,10 @@ export default class ProjectModal {
             }
         });
         document.body.removeChild(modalOverlay);
-        document.removeEventListener("keydown", function (e) {
+        document.addEventListener("keydown", function (e) {
             if (e.key == "Escape")  {
-                var closeButton = this.getElementsByClassName("close-button")[0];
-                this.closeModal(closeButton);
+                var closeButton = getElementsByClassName("close-button")[0];
+                thisClass.closeModal(closeButton);
             }
         });
     }
