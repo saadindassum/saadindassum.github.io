@@ -8,6 +8,9 @@ Blue Grey:  #6699CC
     --primary: #ffffff;
     --title-image-size: 440px;
     --hover-title-size: 450px;
+
+    --light-space: #18003f;
+    --dark-space: #02001a;
   }
 
 
@@ -62,6 +65,52 @@ body {
 section {
     padding: 100px 0;
 }
+
+@keyframes pan {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+/* scrolling background*/
+#tile-container {
+    background: linear-gradient(180deg, var(--dark-space), black);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+  }
+  
+  #tile-pattern {
+    background-image: url("../gameplan-assets/sd-tile.svg");
+    background-size: 8%;  
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    translate: -50% 0%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    opacity: 0.10;
+    animation: pan 300s linear infinite;
+    will-change: background-position;
+  }
+  
+  #tile-gradient-overlay {
+    background: radial-gradient(circle, transparent 75%, black);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 2;
+  }
+
 
 /* home section */
 
