@@ -17,7 +17,7 @@ const ModalWindow = {
                     <div class="modal__content">
                         <p>${modalOptions.content}</p>
                         <div class="modal__center">
-                        <button class="modal__close modal__button">Okay!!!</button>
+                        <button class="modal__close modal__button">Okay!</button>
                     </div>
                     </div>
                 </div>

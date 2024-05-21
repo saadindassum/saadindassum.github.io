@@ -21,7 +21,7 @@
 }
 
 .modal__overlay {
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -90,8 +90,22 @@
 }
 
 @media (max-width: 947px) {
+    .modal__overlay {
+        z-index: 1000;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: block;
+    }
+
     .modal__window {
         max-width: 95vw;
+        height: 95vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .modal__content {
