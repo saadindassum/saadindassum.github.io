@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 		<link rel="stylesheet" type="text/css" href="css/tomorrow.css">
 		<link rel="stylesheet" type="text/css" href="css/videobg.css">
+		<link rel="stylesheet" type="text/css" href="css/timeline-style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
@@ -37,6 +38,7 @@
 				<div class="logo"><a href="#"><img src="assets/logo.png" id="logo" alt="logo.png"></a></div>
 				<ul class='menu'>
 					<li><a href='#home' class="menu-btn">Home</a></li>
+					<li><a href='#timeline' class="menu-btn">Timeline</a></li>
 					<li><a href='#about' class="menu-btn">Bio</a></li>
 					<li><a href='#news' class="menu-btn">News</a></li>
 					<li><a href='#tomorrow' class="menu-btn">FMN</a></li>
@@ -65,17 +67,69 @@
 		<section class="home" id="home">
 			<div class="max-width">
 				<div class="home-content">
-					<div class="text-1">For a woman who</div>
-					<div class="text-2"><span>Forgot My Name</span></div>
-					<!--div class="text-3">Latest release:</div-->
-					<a href="https://lnk.to/forgot">Stream here!</a>
-					<div class="color-overlay">
+					<div class="color-overlay" onclick="location.href = '#timeline'">
 						<!--Video bg-->
-							<video id="videoBG" poster="assets/banner.jpg" autoplay muted loop>
+							<video id="video-bg" poster="assets/banner.jpg" autoplay muted loop>
 								<source src="assets/videoBanner.mp4" type="video/mp4">
 							</video>
 					<!--Video bg end-->
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Timeline start -->
+		<section id="timeline">
+			<div class="scrolling-background">
+				<div class="project">
+					<div class="image-stack" id="ris" onclick="location.href = 'teaser-pages/ris.html'">
+						<img src="gameplan-assets/ris/ris-icon.png" id="ris-image" alt="ris-icon.png" class="project-image locked">
+						<img src="gameplan-assets/ris/ris-glow.png" id="ris-glow" alt="ris-glow.png" class="glow-image" style="opacity: 0;">
+						<h3>OCT 2024</h3>
+					</div>
+					<audio controls class="hover-audio" id="ris-audio" volume="0">
+						<source src="gameplan-assets/ris/ris-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="dis" onclick="location.href = 'teaser-pages/dis.html'">
+						<img src="gameplan-assets/dis/dis-icon.png" id="dis-image" alt="dis-icon.png" class="project-image locked">
+						<img src="gameplan-assets/dis/dis-glow.png" id="dis-glow" alt="dis-glow.png" class="glow-image" style="opacity: 0;">
+						<h3>MAR 2025</h3>
+					</div>
+					<audio controls class="hover-audio" id="dis-audio" volume="0">
+						<source src="gameplan-assets/dis/dis-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="mrc" onclick="location.href = 'teaser-pages/mrc.html'">
+						<img src="gameplan-assets/mrc/mrc-icon.png" id="mrc-image" alt="mrc-icon.png" class="project-image locked">
+						<img src="gameplan-assets/mrc/mrc-glow.png" id="mrc-glow" alt="mrc-glow.png" class="glow-image" style="opacity: 0;">
+						<h3>NOV 2025</h3>
+					</div>
+					<audio controls class="hover-audio" id="mrc-audio" volume="0">
+						<source src="gameplan-assets/mrc/mrc-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="lal" onclick="location.href = 'teaser-pages/lal.html'">
+						<img src="gameplan-assets/lal/lal-icon.png" id="lal-image" alt="lal-icon.png" class="project-image locked">
+						<img src="gameplan-assets/lal/lal-glow.png" id="lal-glow" alt="lal-glow.png" class="glow-image" style="opacity: 0;">
+						<h3>JUL 2026</h3>
+					</div>
+					<audio controls class="hover-audio" id="lal-audio" volume="0">
+						<source src="gameplan-assets/lal/lal-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="hrn" onclick="location.href = 'teaser-pages/hrn.html'">
+						<img src="gameplan-assets/hrn/hrn-icon.png" id="hrn-image" alt="hrn-icon.png" class="project-image locked">
+						<img src="gameplan-assets/hrn/hrn-glow.png" id="hrn-glow" alt="hrn-glow.png" class="glow-image" style="opacity: 0;">
+						<h3>OCT 2028</h3>
+					</div>
+					<audio controls class="hover-audio" id="hrn-audio" volume="0">
+						<source src="gameplan-assets/hrn/hrn-sample.mp3" type="audio/mp3">
+					</audio>
 				</div>
 			</div>
 		</section>
@@ -209,6 +263,6 @@
 			<br>
 		</footer>
 		<script src="script.js"></script>
+		<script src="hover-play.js"></script>
 	</body>
-
 </html>
