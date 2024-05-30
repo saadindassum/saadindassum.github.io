@@ -123,6 +123,7 @@ Blue Grey:  #6699CC
     position: relative;
     width: var(--title-image-size);
     transition: 0.3s ease;
+    height: 360px;
     /* background-color: crimson; */
 }
 
@@ -168,39 +169,47 @@ Blue Grey:  #6699CC
 
 @media (max-width: 991px) {
 
-    #first {
-        margin-left: 0vw;
+    .scrolling-background {
+        display: block;
+        overflow-x: hidden;
+        height: auto;
     }
 
     .project {
         display: block;
-        min-width: 0;
-        width: 100%;
-        height: 250px;
-        margin-left: 0;
-        margin-right: 0;
+        position: relative;
+        float: none;
+        width: 450px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        margin-bottom: 200px;
     }
 
     .project .image-stack {
         width: 100%;
         height: 100%;
+        position: relative;
     }
 
-    footer{
-        position: static;
+    .project:nth-child(1) {
+        margin-top: 25px;
+    }
+
+    .project:nth-child(1), .project:last-child {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .image-stack img {
-        width: 95%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: static;
     }
 
     .glow-image {
         display: none;
+        height: 0;
+        width: 0;
     }
 
     /* .project:nth-child(even) {
@@ -222,7 +231,11 @@ Blue Grey:  #6699CC
 
 @media (max-width: 500px) {
     .project {
-        height: 225px;
-        margin-bottom: 50px;
+        width: 92vw;
+        height: auto;
+    }
+    .image-stack img {
+        width: 100%;
+        margin-bottom: 25px;
     }
 }
