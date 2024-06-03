@@ -47,7 +47,6 @@ Blue Grey:  #6699CC
 
 /* scrolling background*/
 #tile-container {
-    
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -85,6 +84,9 @@ Blue Grey:  #6699CC
     /* background-color: blue; */
     padding: 0 !important;
     margin: 0 !important;
+    height: 99vh;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -95,7 +97,6 @@ Blue Grey:  #6699CC
     padding-top: 150px;
     height: 750px;
     display: flex;
-    background: linear-gradient(180deg, var(--dark-space), black);
 }
 
 .project {
