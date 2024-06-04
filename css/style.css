@@ -393,6 +393,11 @@ footer img{
 
 @media (max-width: 947px) {
 
+    #video-bg {
+        transform: translate(-40%, 0);
+        height: 100%;
+    }
+
     .max-width{
         max-width: 800px;
     }
@@ -441,8 +446,7 @@ footer img{
     }
 
     #video-bg {
-        transform: translate(-35%, 0);
-        height: 100%;
+        transform: translate(-40%, 0);
     }
 
     /*690 home*/
@@ -460,6 +464,10 @@ footer img{
 }
 
 @media (max-width: 500px) {
+    #video-bg {
+        transform: translate(-35%, 0);
+    }
+
     .home .home-content .text-2 {
         font-size:  50px;
     }
