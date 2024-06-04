@@ -440,6 +440,11 @@ footer img{
         font-size: 12px;
     }
 
+    #video-bg {
+        transform: translate(-35%, 0);
+        height: 100%;
+    }
+
     /*690 home*/
 
     .home .home-content .text-2 {

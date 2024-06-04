@@ -170,6 +170,11 @@ Blue Grey:  #6699CC
 
 @media (max-width: 991px) {
 
+    #timeline {
+        display: block;
+        height: auto;
+    }
+
     .scrolling-background {
         display: block;
         overflow-x: hidden;
