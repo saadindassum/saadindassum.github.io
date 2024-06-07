@@ -72,28 +72,6 @@ section .title{
     font-family: 'sangBold';
 }
 
-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width:  600px;
-    height: 2px;
-    background: white;
-    transform: translateX(-50%);
-}
-
-section .title::after{
-    position: absolute;
-    bottom: -18px;
-    left: 50%;
-    font-size: 20px;
-    color: #fabf00; 
-    padding: 5px;
-    background: black;
-    transform: translateX(-50%);
-}
-
 section {
     padding: 100px 0;
 }
@@ -203,10 +181,6 @@ section {
 
 
 /*About Section Styling*/
-.about .title::after {
-    content: "the Romantic Absurdist";
-}
-
 .about .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -268,12 +242,6 @@ section {
 .news .title::before{
     background: #fff;
 }
-
-.news .title::after {
-    background: #0f121c;
-    content: "MDC's Miami Film Festival";
-}
-
 
 /*footer styling*/
 footer{
@@ -378,10 +346,6 @@ footer img{
     }
     section .title::before{
         width: 400px;
-    }
-
-    section .title::after{
-        font-size: 12px;
     }
 
     #video-bg {

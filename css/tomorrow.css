@@ -1,7 +1,3 @@
-.tomorrow .title::after {
-    content: "Songwriter's note...";
-}
-
 .tomorrow .tomorrow-content {
     display: flex;
     flex-wrap: wrap;
