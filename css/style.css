@@ -305,6 +305,12 @@ footer img{
 
 /* Responsive media query */
 
+@media (max-width: 2560px) {
+    #video-bg {
+        height: 100%;
+    }
+}
+
 @media (max-width: 1300px) {
     .home .max-width {
         margin-left: 0px;
