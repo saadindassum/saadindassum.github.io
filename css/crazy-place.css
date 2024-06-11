@@ -1,0 +1,122 @@
+:root {
+    --big-size: 80px;
+    --mid-size: 45px;
+    --lil-size: 30px;
+    --split-padding: 10px;
+}
+
+/* font */
+@font-face {
+    font-family: custom-impact;
+    src: url(../assets/321impact.ttf);
+  }
+
+/* crazy place styling */
+#crazy-place {
+    /* background-color: aqua; */
+    font-family: custom-impact;
+}
+
+.split-screen {
+    height: 500px;
+    /* background-color: purple; */
+    padding: 0 !important;
+}
+
+.split-screen .left-screen, .split-screen .right-screen {
+    float: left;
+}
+
+.split-screen .left-screen {
+    /* background-color: blue; */
+    width: 50%;
+    height: 100%;
+    text-align: end;
+    padding-right: var(--split-padding);
+}
+
+.split-screen .right-screen {
+    /* background-color: crimson; */
+    width: 50%;
+    height: 100%;
+    padding-right: var(--split-padding);
+    padding-top: 35px;
+    text-align: end;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.split-screen div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* .left-screen div:nth-child(even), .right-screen div:nth-child(even) {
+    background-color: black;
+} */
+
+.word-container {
+    margin: 0;
+    width: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.left-screen .top-word {
+    font-size: var(--lil-size);
+    height: var(--lil-size);
+}
+
+.right-screen .top-word {
+    font-size: var(--mid-size);
+    height: var(--mid-size);
+    transform: translate(0, 35px);
+}
+
+.mid-word {
+    font-size: var(--big-size);
+    height: var(--big-size);
+}
+
+.left-screen .bot-word {
+    font-size: var(--mid-size);
+    height: var(--mid-size);
+    transform: translate(0, -30px);
+}
+
+.right-screen .bot-word {
+    font-size: var(--lil-size);
+    height: var(--lil-size);
+}
+
+#loading-screen-tip {
+    float: right;
+    /* background-color:blueviolet; */
+    width: 45%;
+}
+
+#loading-screen-tip span {
+    color: #fabf00;
+}
+
+.top-shadow, .bot-shadow {
+    position: relative;
+}
+
+.top-shadow {
+    transform: translate(-5px, -104%);
+    /* transform: translate(0, -100%); */
+}
+
+.bot-shadow {
+    transform: translate(-5px, -195%);
+}
+
+/* word bank */
+
+#word-bank {
+    display: none;
+}
