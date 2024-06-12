@@ -27,6 +27,8 @@ for (let i = 0; i < words.length; i++) {
 
 // First, we're gonna wanna get all the on-screen words containers, so that we can mess with their inner HTML.
 let crazyPlace = document.getElementById("crazy-place");
+//We make crazy place the child of itself because we added in a div to center all content.
+crazyPlace = crazyPlace.childNodes[1];
 let splitScreen = crazyPlace.getElementsByTagName("*")[0];
 let screens = new Array();
 

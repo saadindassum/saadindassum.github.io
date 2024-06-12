@@ -26,6 +26,22 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<style>
+			:root {
+				--highlight-color: rgb(5, 69, 81);
+			}
+			/* Star background */
+			#star-container {
+			  background: linear-gradient(180deg, var(--dark-space) 0%, var(--light-space) 35%, orange 100%);
+			  /* this commented out gradient is also pretty sick, maybe for another season
+			  or if you figure out how to change the value as you scroll, you might be able to make one turn into the other */
+			  /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+			}
+			footer span a{
+				color: var(--highlight-color);
+				text-decoration: none;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- N A V B A R -->
@@ -54,75 +70,48 @@
 			</div>
 		</nav>
         <div id="star-container"></div>
-		<section id="title">
-            <div class="title">
-                	<img src="../gameplan-assets/ris/ris-title.png" id="ris-image" alt="ris-title.png" class="project-image">
-            </div>
-		</section>
-        <!-- F O R E W O R D  S T A R T-->
-		<section id="foreword" class="max-width">
-			<div>
-				<p>&emsp;<strong>The melting pot's done cooking, and some savory freaking tunes have come from it.</strong> Rock in Spanglish is a combination of Saadin's love of Hispanic and Western culture. Rock influenced by merengue, latin pop, and bachata will be a sure-fire hit to the generation that grew up in Latin America in the 90s, and a delicious treat to the ears of others.</p>
-			</div>
-		</section>
-		<!-- F O R E W O R D  E N D-->
-        <!--T R A C K  L I S T  S E C T I O N  S T A R T-->
-        <!-- <section id="track-listing" class="max-width">
-            <h1>Track Listing</h1>
-            <div>
-                <p>
-                1. Más de lo que Debo<br>
-                2. Jacoba Guitarras<br>
-                3. La Contra<br>
-                4. &lt;3^6 (Corazón Elevado al Sexto)<br>
-                5. Te Quiero Amar<br>
-    		</p> -->
-            <!-- And before you ask, the ol tag is acting funky and I have no clue why or time to find out why. -->
-            <!-- </div>
-            <img src="../gameplan-assets/ris/ris-art.jpg" alt="ris-art">
-        </section> -->
-        <!--T R A C K  L I S T  S E C T I O N  E N D-->
-
 		<!-- C R A Z Y   L E T T E R   P L A C E  -->
 		<section id="crazy-place">
-			<div class="split-screen max-width">
-				<div class="left-screen">
-					<div class="top-word word-container" style="opacity: 0.9;">
-						<div class="main-word" style="opacity: 1;">LOADING</div>
-						<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
-						<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+			<div id="crazy-place-content">
+				<div class="split-screen max-width">
+					<div class="left-screen">
+						<div class="top-word word-container" style="opacity: 0.9;">
+							<div class="main-word" style="opacity: 1;">LOADING</div>
+							<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
+							<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+						</div>
+						<div class="mid-word word-container" style="opacity: 0.9;">
+							<div class="main-word" style="opacity: 1;">LOADING</div>
+							<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
+							<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+						</div>
+						<div class="bot-word word-container" style="opacity: 0.5;">
+							<div class="main-word" style="opacity: 1;">LOADING</div>
+							<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
+							<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+						</div>
 					</div>
-					<div class="mid-word word-container" style="opacity: 0.9;">
-						<div class="main-word" style="opacity: 1;">LOADING</div>
-						<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
-						<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
-					</div>
-					<div class="bot-word word-container" style="opacity: 0.5;">
-						<div class="main-word" style="opacity: 1;">LOADING</div>
-						<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
-						<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+					<div class="right-screen">
+						<div class="top-word word-container" style="opacity: 0.5;">
+							<div class="main-word" style="opacity: 1;">LOADING</div>
+							<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
+							<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
+						</div>
+						<div class="mid-word word-container" style="opacity: 0.9;">
+							<div class="main-word" style="opacity: 1;">GAME</div>
+							<div class="top-shadow" style="opacity: 0.5;">GAME</div>
+							<div class="bot-shadow" style="opacity: 0.5;">GAME</div>
+						</div>
+						<div class="bot-word word-container" style="opacity: 0.9;">
+							<div class="main-word" style="opacity: 1;">GIRLFRIEND</div>
+							<div class="top-shadow" style="opacity: 0.5;">GIRLFRIEND</div>
+							<div class="bot-shadow" style="opacity: 0.5;">GIRLFRIEND</div>
+						</div>
 					</div>
 				</div>
-				<div class="right-screen">
-					<div class="top-word word-container" style="opacity: 0.5;">
-						<div class="main-word" style="opacity: 1;">LOADING</div>
-						<div class="top-shadow" style="opacity: 0.5;">LOADING</div>
-						<div class="bot-shadow" style="opacity: 0.5;">LOADING</div>
-					</div>
-					<div class="mid-word word-container" style="opacity: 0.9;">
-						<div class="main-word" style="opacity: 1;">GAME</div>
-						<div class="top-shadow" style="opacity: 0.5;">GAME</div>
-						<div class="bot-shadow" style="opacity: 0.5;">GAME</div>
-					</div>
-					<div class="bot-word word-container" style="opacity: 0.9;">
-						<div class="main-word" style="opacity: 1;">GIRLFRIEND</div>
-						<div class="top-shadow" style="opacity: 0.5;">GIRLFRIEND</div>
-						<div class="bot-shadow" style="opacity: 0.5;">GIRLFRIEND</div>
-					</div>
+				<div id="tip-container" class="max-width">
+					<div id="loading-screen-tip">Rock fused with Merengue, Tropi-pop, Bachata... Influences ranging from Olga Tanon to Jeff Lynne. It's <span>all out Latin 90s</span> in this insane one-brain melting pot.</div>
 				</div>
-			</div>
-			<div id="tip-container" class="max-width">
-				<div id="loading-screen-tip">This is where we throw our little summary. It's probably going to contain two or three <span>short sentences</span> teasing the album. No more  than that!</div>
 			</div>
 			<div id="word-bank">tell you tiempo ame noche solo pelea quebrar eternidad guapa adoro corazon Late dejar otro amar Rosa Castigo piedad miedo jade perfect</div>
 		</section>
