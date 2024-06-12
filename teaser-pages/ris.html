@@ -28,11 +28,19 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 		<style>
 			:root {
-				--highlight-color: rgb(5, 69, 81);
+				--highlight-color: #1e2754;
+			}
+			/* font */
+			@font-face {
+				font-family: custom-impact;
+				src: url(../assets/321impact.ttf);
+			}
+			body {
+				font-family: custom-impact;
 			}
 			/* Star background */
 			#star-container {
-			  background: linear-gradient(180deg, var(--dark-space) 0%, var(--light-space) 35%, orange 100%);
+			  background: linear-gradient(180deg, #1e2754 0%, #631503 35%, #fabf00 100%);
 			  /* this commented out gradient is also pretty sick, maybe for another season
 			  or if you figure out how to change the value as you scroll, you might be able to make one turn into the other */
 			  /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
@@ -71,7 +79,7 @@
 		</nav>
         <div id="star-container"></div>
 		<!-- C R A Z Y   L E T T E R   P L A C E  -->
-		<section id="crazy-place">
+		<section id="crazy-place" onclick="location.href = '#track-listing'">
 			<div id="crazy-place-content">
 				<div class="split-screen max-width">
 					<div class="left-screen">
@@ -113,13 +121,32 @@
 					<div id="loading-screen-tip">Rock fused with Merengue, Tropi-pop, Bachata... Influences ranging from Olga Tanon to Jeff Lynne. It's <span>all out Latin 90s</span> in this insane one-brain melting pot.</div>
 				</div>
 			</div>
-			<div id="word-bank">tell you tiempo ame noche solo pelea quebrar eternidad guapa adoro corazon Late dejar otro amar Rosa Castigo piedad miedo jade perfect</div>
+			<div id="word-bank">tell you tiempo ame noche solo pelea quebrar eternidad guapa adoro corazon Late dejar otro amar Rosa Castigo piedad miedo jade perfect playa regia loco mujer jamas hechizera domadora</div>
 		</section>
 		<!-- C R A Z Y   L E T T E R   P L A C E  E N D -->
 
+		<!--T R A C K  L I S T  S E C T I O N  S T A R T-->
+		<section id="track-listing" class="max-width">
+			<div>
+				<div id="image-container">
+					<img src="../gameplan-assets/ris/ris-icon.png" alt="ris-art">
+				</div>
+				<p>
+					1. Más de lo que Debo<br>
+					2. Jacoba Guitarras<br>
+					3. ???<br>
+					4. &lt;3^6 (Corazón Elevado al Sexto)<br>
+					5. Te Quiero Amar
+				</p>
+				<!-- And before you ask, the ol tag is acting funky and I have no clue why or time to find out why. -->
+				 <!-- You'd get it if you were splitting your life between production, an app, and a company. -->
+			</div>
+		</section>
+		<!--T R A C K  L I S T  S E C T I O N  E N D-->
+
 		<!--R E L E A S E  D A T E-->
         <section id="release-date">
-            <h2>Coming October 2024</h2>
+            <h2>October 2024</h2>
         </section>
         <!--R E L E A S E  D A T E  E N D-->
 

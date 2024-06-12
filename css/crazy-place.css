@@ -15,20 +15,17 @@
     --split-padding: 45px;
 }
 
-/* font */
-@font-face {
-    font-family: custom-impact;
-    src: url(../assets/321impact.ttf);
-  }
-
 /* crazy place styling */
 #crazy-place {
     /* background-color: aqua; */
-    font-family: custom-impact;
     height: 100vh;
     width: 100vw;
     padding: 0;
     margin: 0;
+}
+
+#crazy-place:hover {
+    cursor: pointer;
 }
 
 #crazy-place-content {

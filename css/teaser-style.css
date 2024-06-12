@@ -36,8 +36,13 @@
     margin-bottom: 25px;
 }
 
+#image-container {
+    width: 49%;
+    float: left;
+}
+
 #track-listing img {
-    width: 35%;
+    width: 75%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -46,8 +51,6 @@
 }
 
 #track-listing  p {
-    width: 49%;
-    float: left;
     margin-bottom: 25px;
     padding-left: 10px;
     font-size: 25px;
@@ -77,8 +80,18 @@
 
 @media (max-width: 690px) {
 
+    #image-container {
+        width: 100%;
+        float: none;
+    }
+
     #track-listing img {
         width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        border-radius: 5px;
     }
 }
 
