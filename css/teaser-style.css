@@ -60,6 +60,14 @@
     margin-right: 2%;
 }
 
+/* Responsive Media Query */
+
+@media (max-width: 2559px) {
+    #track-listing {
+        padding-top: 150px;
+    }
+}
+
 @media (max-width: 1350px) {
 }
 

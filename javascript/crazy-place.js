@@ -2,10 +2,10 @@
 
 //SOME CONSTS
 
-/** Because a frame is abouuuut 42 milliseconds  at 24fps
- * And we're going for cinema here.
+/** Because a frame is abouuuut 33 milliseconds  at 30fps
+ * We were going for 24fps for the cinema, but it looks a bit jaggedy.
 */
-const frame = 42;
+const frame = 33;
 
 // Main word will have index 0
 // Top shadow will have index 1
@@ -208,6 +208,22 @@ async function fadeOut(index, frames, opacity = 0.5) {
     return wordContainer;
 }
 
+/**
+ * Immediately changes the opacity of a word container to its full capacity.
+ * @param {number} index The index of the word container to change
+ */
+function opacityFull(index) {
+    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.5" : "1";
+}
+
+/**
+ * Immediately changes the opacity of a word container to its partial capacity.
+ * @param {number} index The index of the word container to change
+ */
+function opacityHalf(index) {
+    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.1" : "0.5";
+}
+
 /**Changes the word in a word container
  * @param {number} index The word container to change
  */
@@ -225,7 +241,7 @@ function changeWord(index) {
  */
 
 function triggerRandomAnimation(index) {
-    let anim = Math.floor(Math.random() * 4);
+    let anim = Math.floor(Math.random() * 9);
     switch (anim) {
         case 0:
             animation0(index);
@@ -236,8 +252,23 @@ function triggerRandomAnimation(index) {
         case 2:
             animation2(index);
             break;
-        default:
+        case 3:
             animation3(index);
+            break;
+        case 4:
+            animation4(index);
+            break;
+        case 5:
+            animation5(index);
+            break;
+        case 6:
+            animation6(index);
+            break;
+        case 7:
+            animation7(index);
+            break;
+        default:
+            animation8(index);
             break;
     }
 }
@@ -256,7 +287,7 @@ async function animation0 (index) {
     showBotShadow(index);
     await delay(5 * frame);
     hideBotShadow(index);
-    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.1" : "0.5";
+    opacityHalf(index);
     await delay(frame);
     changeWord(index);
     showBotShadow(index);
@@ -270,7 +301,7 @@ async function animation0 (index) {
  * @param {number} index The word container to animate
  */
 async function animation1 (index) {
-    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.1" : "0.5";
+    opacityHalf(index);
     await delay(2 * frame);
     changeWord(index);
     await delay(2 * frame);
@@ -291,7 +322,7 @@ async function animation2 (index) {
     hideBotShadow(index);
     await delay(2 * frame);
     fadeOut(index, 3, index == 2 || index == 3 ? 0.1 : 0.5);
-    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.5" : "1";
+    opacityFull(index);
     await delay(2 * frame);
     await fadeOut(index, 6, index == 2 || index == 3 ? 0.1 : 0.5);
     await delay(5 * frame);
@@ -317,11 +348,11 @@ async function animation3 (index) {
     hideBotShadow(index);
     await delay(2 * frame);
     await fadeOut(index, 3, index == 2 || index == 3 ? 0.1 : 0.5);
-    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.5" : "1";
+    opacityFull(index);
     await delay(7 * frame);
     await fadeOut(index, 3, index == 2 || index == 3 ? 0.1 : 0.5);
     showTopShadow(index);
-    wordContainerObjects[index].style.opacity = index == 2 || index == 3 ? "0.5" : "1";
+    opacityFull(index);
     await delay(5 * frame);
     hideTopShadow(index);
     showBotShadow(index);
@@ -329,5 +360,101 @@ async function animation3 (index) {
     await fadeOut(index, 5, index == 2 || index == 3 ? 0.1 : 0.5);
     changeWord(index);
     await fadeIn(index, 3, index == 2 || index == 3 ? 0.5 : 1);
+    triggerRandomAnimation(index);
+}
+
+/** Triggers animation 4
+ * @param {number} index The word container to animate
+ */
+async function animation4 (index) {
+    await delay(2 * frame);
+    opacityHalf(index);
+    await delay(frame);
+    changeWord(index);
+    await fadeIn(index, 5, index == 2 || index == 3 ? 0.5 : 1);
+    await delay(4 * frame);
+    showTopShadow(index);
+    await delay(6 * frame);
+    hideTopShadow(index);
+    showBotShadow(index);
+    await fadeOut(index, 5, index == 2 || index == 3 ? 0.1 : 0.5);
+    hideBotShadow(index);
+    await delay(frame);
+    changeWord(index);
+    await fadeIn(index, 4, index == 2 || index == 3 ? 0.5 : 1);
+    triggerRandomAnimation(index);
+}
+
+/** Triggers animation 5
+ * @param {number} index The word container to animate
+ */
+async function animation5 (index) {
+    await delay(3 * frame);
+    showBotShadow(index);
+    await delay(3 * frame);
+    hideBotShadow(index);
+    await delay(2 * frame);
+    opacityHalf(index);
+    await delay(2 * frame);
+    opacityFull(index);
+    await delay(6 * frame);
+    await fadeOut(index, 6, index == 2 || index == 3 ? 0.1 : 0.5);
+    await delay(frame);
+    changeWord(index);
+    await fadeIn(index, 4, index == 2 || index == 3 ? 0.5 : 1);
+    triggerRandomAnimation(index);
+}
+
+/** Triggers animation 6
+ * @param {number} index The word container to animate
+ */
+async function animation6 (index) {
+    showTopShadow(index);
+    await delay(3 * frame);
+    hideTopShadow(index);
+    await delay(5 * frame);
+    await fadeOut(index, 2, index == 2 || index == 3 ? 0.1 : 0.5);
+    opacityFull(index);
+    await delay(5 * frame);
+    showBotShadow(index);
+    await delay(6 * frame);
+    hideBotShadow(index);
+    await delay(2 * frame);
+    await fadeOut(index, 4, index == 2 || index == 3 ? 0.1 : 0.5);
+    await delay(2 * frame);
+    changeWord(index);
+    await delay(frame);
+    opacityFull(index);
+    triggerRandomAnimation(index);
+}
+
+/** Triggers animation 7
+ * @param {number} index The word container to animate
+ */
+async function animation7 (index) {
+    await delay(frame);
+    showBotShadow(index);
+    await fadeOut(index, 8, index == 2 || index == 3 ? 0.1 : 0.5);
+    hideBotShadow(index);
+    changeWord(index);
+    await delay(2 * frame);
+    showTopShadow(index);
+    await fadeIn(index, 2, index == 2 || index == 3 ? 0.5 : 1);
+    hideTopShadow(index);
+    showBotShadow(index);
+    await delay(4 * frame);
+    hideBotShadow(index);
+    triggerRandomAnimation(index);
+}
+
+/** Triggers animation 8
+ * @param {number} index The word container to animate
+ */
+async function animation8 (index) {
+    await delay(2 * frame);
+    await fadeOut(index, 3, index == 2 || index == 3 ? 0.1 : 0.5);
+    changeWord(index);
+    await delay(2 * frame);
+    opacityFull(index);
     triggerRandomAnimation(index);
 }

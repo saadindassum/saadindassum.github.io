@@ -141,6 +141,10 @@
 }
 
 @media (max-width: 2559px) {
+    .split-screen {
+        height: 300px;
+    }
+
     .left-screen .top-word {
         font-size: var(--mid-lil-size);
         height: var(--mid-lil-size);
