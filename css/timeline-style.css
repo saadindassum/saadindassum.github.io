@@ -90,6 +90,23 @@ Blue Grey:  #6699CC
 
 }
 
+#screen-glare {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+#screen-glare img {
+    width: 100%;
+    height: 100%;
+}
+
+.timeline-overlay {
+    pointer-events : none;
+    position : absolute;
+}
+
 .scrolling-background {
     overflow-x: scroll;
     overflow-y: hidden;
