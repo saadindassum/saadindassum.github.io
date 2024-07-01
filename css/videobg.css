@@ -46,6 +46,12 @@
 	}
 }
 
+@media (max-width: 944px) {
+	#poster-container img {
+		transform: translate(-15%, 0);
+	}
+}
+
 @media (max-width: 750px) {
 	#videoBG{
 		left: -500px;
@@ -57,6 +63,6 @@
 		left: -600px;
 	}
 	#poster-container img {
-		transform: translate(-35%, 0);
+		transform: translate(-15%, 0);
 	}
 }
