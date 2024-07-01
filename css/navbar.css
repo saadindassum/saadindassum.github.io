@@ -1,8 +1,15 @@
+:root {
+	--light-space: #18003f;
+	--dark-space: #02001a;
+} 
+
  #logo {
  	width: 45px;
  }
 .navbar {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	padding: 25px 0;
 	font-family:  sang;
@@ -12,7 +19,7 @@
 
 .navbar.sticky{
 	padding: 15px 0;
-	background:  #0f121c;
+	background:  var(--dark-space);
 }
 
 .navbar .max-width {

@@ -6,6 +6,8 @@ Blue Grey:  #6699CC
 :root {
     --secondary: #fabf00;
     --primary: #ffffff;
+    --light-space: #18003f
+    --dark-space: #02001a;
 }
 
 /* F O N T S */
@@ -34,6 +36,7 @@ Blue Grey:  #6699CC
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *{
@@ -43,6 +46,11 @@ html {
     text-decoration: none;
 }
 
+/* Scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+  }
+
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -51,7 +59,6 @@ html {
 }
 
 body {
-    background-color: black;
     color: white;
 }
 
@@ -65,28 +72,6 @@ section .title{
     font-family: 'sangBold';
 }
 
-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width:  600px;
-    height: 2px;
-    background: white;
-    transform: translateX(-50%);
-}
-
-section .title::after{
-    position: absolute;
-    bottom: -18px;
-    left: 50%;
-    font-size: 20px;
-    color: #fabf00; 
-    padding: 5px;
-    background: black;
-    transform: translateX(-50%);
-}
-
 section {
     padding: 100px 0;
 }
@@ -96,15 +81,39 @@ section {
 }
 
 
+/* Star background */
+
+#star-container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, var(--light-space) 0%, var(--dark-space) 35%, black 100%);
+  /* this commented out gradient is also pretty sick, maybe for another season
+  or if you figure out how to change the value as you scroll, you might be able to make one turn into the other */
+  /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+  z-index: -1000;
+}
+
+.star {
+    background-color: #fffaf1;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+
 /* home section */
 
 .home {
     display: flex;
-    background: black;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: sangMed;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0));
 
 }
 
@@ -112,12 +121,14 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
     width: 100%;
     height: 100vh;
-    opacity: 0.7;
     z-index: 100;
     overflow: hidden!important;
+}
+
+.color-overlay {
+    cursor: pointer;
 }
 
 .home .max-width {
@@ -170,10 +181,6 @@ section {
 
 
 /*About Section Styling*/
-.about .title::after {
-    content: "the Romantic Absurdist";
-}
-
 .about .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -236,84 +243,12 @@ section {
     background: #fff;
 }
 
-.news .title::after {
-    background: #0f121c;
-    content: "MDC's Miami Film Festival";
-}
-
-.news .carousel .card {
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.news .carousel .card:hover {
-    background: #708090;
-}
-
-.news .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.news .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-
-.news .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-
-.news .carousel .card img{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 5%;
-    border: 5px solid #fabf00;
-    transition: all 0.3s ease;
-}
-
-.news .carousel .card:hover img{
-    border-color: #fabf00;
-}
-
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.owl-dot {
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid #fabf00!important;
-    transition: all 0.3s ease;
-}
-
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-
-.owl-dot.active, .owl-dot:hover {
-    background: #fabf00!important;
-}
-
-
 /*footer styling*/
 footer{
     padding: 20px 23px;
     text-align: center;
     font-size: 12px;
+    margin-bottom: 50px;
 }
 
 footer span a{
@@ -330,6 +265,7 @@ footer img{
     margin-bottom: 10px;
     height: 80px;
     width: auto;
+    display: block;
 }
 
 
@@ -337,6 +273,12 @@ footer img{
 
 
 /* Responsive media query */
+
+@media (max-width: 2560px) {
+    #video-bg {
+        height: 100%;
+    }
+}
 
 @media (max-width: 1300px) {
     .home .max-width {
@@ -358,6 +300,11 @@ footer img{
 }
 
 @media (max-width: 947px) {
+
+    #video-bg {
+        transform: translate(-40%, 0);
+        height: 100%;
+    }
 
     .max-width{
         max-width: 800px;
@@ -402,8 +349,8 @@ footer img{
         width: 400px;
     }
 
-    section .title::after{
-        font-size: 12px;
+    #video-bg {
+        transform: translate(-40%, 0);
     }
 
     /*690 home*/
@@ -421,6 +368,10 @@ footer img{
 }
 
 @media (max-width: 500px) {
+    #video-bg {
+        transform: translate(-35%, 0);
+    }
+
     .home .home-content .text-2 {
         font-size:  50px;
     }

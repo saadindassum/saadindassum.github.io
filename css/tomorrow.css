@@ -1,23 +1,14 @@
-.tomorrow .title::after {
-    content: "Songwriter's note...";
-}
-
 .tomorrow .tomorrow-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
-
-.tomorrow .tomorrow-content .left{
-    width: 45%;
-}
-
-.tomorrow .tomorrow-content .left img {
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
+.tomorrow .tomorrow-content img {
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 6px;
+    display: block;
+    margin-bottom: 25px;
 }
 
 .tomorrow .tomorrow-content .right{
@@ -50,6 +41,39 @@
 .tomorrow .tomorrow-content .right a:hover {
     color: white;
     background: none;
+}
+
+.stream-button {
+    font-size: 50px;
+    transition: all 0.3s ease;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 15px;
+    width: 300px;
+    transition: all 0.3s ease;
+  }
+
+  .button-container:hover {
+    cursor: pointer;
+  }
+
+  .button-container:hover p, .button-container:hover .stream-button {
+    color: #fabf00;
+  }
+
+.button-container p {
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.button-container .spoti-button {
+    color: #64D36D
 }
 
 /* Responsive media query */
