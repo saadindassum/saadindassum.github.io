@@ -32,11 +32,10 @@
 
 <body>
 	<div id="star-container"></div>
+</body>
 
-	</div>
-	<div class="scroll-up-btn">
-		<i class="fas fa-angle-up"></i>
-	</div>
+<body>
+
 	<!-- N A V B A R -->
 	<nav class="navbar">
 		<div class="max-width">
@@ -72,132 +71,102 @@
 		</div>
 	</nav>
 
-	<!-- H O M E  S E C T I O N  S T A R T-->
-	<section class="home" id="home">
-		<div class="max-width">
-			<div class="home-content">
-				<div class="color-overlay" onclick="location.href = '#timeline'">
-					<div id="poster-container">
-						<img src="assets/banner.jpg">
+	<a href="#timeline">
+		<div class="banner-container">
+			<video id="video-banner" autoplay muted loop playsinline
+				onerror="this.style.display='none'; document.querySelector('#fallback-banner').style.display='block';">
+				<source src="assets/videoBanner.mp4" type="video/mp4">
+			</video>
+			<img id="fallback-banner" src="assets/banner.jpg" alt="Banner">
+		</div>
+	</a>
+
+	<main>
+		<!-- Timeline start -->
+		<section id="timeline">
+			<div class="scrolling-background">
+				<div class="project">
+					<div class="image-stack" id="ris" onclick="location.href = 'teaser-pages/ris.html'">
+						<img src="gameplan-assets/ris/ris-icon.png" id="ris-image" alt="ris-icon.png"
+							class="project-image locked">
+						<img src="gameplan-assets/ris/ris-glow.png" id="ris-glow" alt="ris-glow.png" class="glow-image"
+							style="opacity: 0;">
+						<h3>FEB 2025</h3>
 					</div>
-					<!--Video bg-->
-					<video id="video-bg" autoplay muted loop>
-						<source src="assets/videoBanner.mp4" type="video/mp4">
-					</video>
-					<!--Video bg end-->
+					<audio controls class="hover-audio" id="ris-audio" volume="0">
+						<source src="gameplan-assets/ris/ris-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="dis" onclick="location.href = 'teaser-pages/dis.html'">
+						<img src="gameplan-assets/dis/dis-icon.png" id="dis-image" alt="dis-icon.png"
+							class="project-image locked">
+						<img src="gameplan-assets/dis/dis-glow.png" id="dis-glow" alt="dis-glow.png" class="glow-image"
+							style="opacity: 0;">
+						<h3>JUN 2025</h3>
+					</div>
+					<audio controls class="hover-audio" id="dis-audio" volume="0">
+						<source src="gameplan-assets/dis/dis-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="mrc" onclick="location.href = 'teaser-pages/mrc.html'">
+						<img src="gameplan-assets/mrc/mrc-icon.png" id="mrc-image" alt="mrc-icon.png"
+							class="project-image locked">
+						<img src="gameplan-assets/mrc/mrc-glow.png" id="mrc-glow" alt="mrc-glow.png" class="glow-image"
+							style="opacity: 0;">
+						<h3>2026</h3>
+					</div>
+					<audio controls class="hover-audio" id="mrc-audio" volume="0">
+						<source src="gameplan-assets/mrc/mrc-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="lal" onclick="location.href = 'teaser-pages/lal.html'">
+						<img src="gameplan-assets/lal/lal-icon.png" id="lal-image" alt="lal-icon.png"
+							class="project-image locked">
+						<img src="gameplan-assets/lal/lal-glow.png" id="lal-glow" alt="lal-glow.png" class="glow-image"
+							style="opacity: 0;">
+						<h3>2026</h3>
+					</div>
+					<audio controls class="hover-audio" id="lal-audio" volume="0">
+						<source src="gameplan-assets/lal/lal-sample.mp3" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="project">
+					<div class="image-stack" id="hrn" onclick="location.href = 'teaser-pages/hrn.html'">
+						<img src="gameplan-assets/hrn/hrn-icon.png" id="hrn-image" alt="hrn-icon.png"
+							class="project-image locked">
+						<img src="gameplan-assets/hrn/hrn-glow.png" id="hrn-glow" alt="hrn-glow.png" class="glow-image"
+							style="opacity: 0;">
+						<h3>2027</h3>
+					</div>
+					<audio controls class="hover-audio" id="hrn-audio" volume="0">
+						<source src="gameplan-assets/hrn/hrn-sample.mp3" type="audio/mp3">
+					</audio>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Timeline start -->
-	<section id="timeline">
-		<div class="scrolling-background">
-			<div class="project">
-				<div class="image-stack" id="ris" onclick="location.href = 'teaser-pages/ris.html'">
-					<img src="gameplan-assets/ris/ris-icon.png" id="ris-image" alt="ris-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/ris/ris-glow.png" id="ris-glow" alt="ris-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>JAN 2025</h3>
-				</div>
-				<audio controls class="hover-audio" id="ris-audio" volume="0">
-					<source src="gameplan-assets/ris/ris-sample.mp3" type="audio/mp3">
-				</audio>
-			</div>
-			<div class="project">
-				<div class="image-stack" id="dis" onclick="location.href = 'teaser-pages/dis.html'">
-					<img src="gameplan-assets/dis/dis-icon.png" id="dis-image" alt="dis-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/dis/dis-glow.png" id="dis-glow" alt="dis-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>JULY 2025</h3>
-				</div>
-				<audio controls class="hover-audio" id="dis-audio" volume="0">
-					<source src="gameplan-assets/dis/dis-sample.mp3" type="audio/mp3">
-				</audio>
-			</div>
-			<!-- <div class="project">
-				<div class="image-stack" id="sss" onclick="location.href = 'teaser-pages/sss.html'">
-					<img src="gameplan-assets/sss/sss-icon.png" id="sss-image" alt="sss-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/sss/sss-glow.png" id="sss-glow" alt="sss-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>OCT 2025</h3>
-				</div>
-				<audio controls class="hover-audio" id="sss-audio" volume="0">
-					<source src="gameplan-assets/sss/sss-sample.mp3" type="audio/mp3">
-				</audio>
-			</div> -->
-			<div class="project">
-				<div class="image-stack" id="mrc" onclick="location.href = 'teaser-pages/mrc.html'">
-					<img src="gameplan-assets/mrc/mrc-icon.png" id="mrc-image" alt="mrc-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/mrc/mrc-glow.png" id="mrc-glow" alt="mrc-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>MAY 2026</h3>
-				</div>
-				<audio controls class="hover-audio" id="mrc-audio" volume="0">
-					<source src="gameplan-assets/mrc/mrc-sample.mp3" type="audio/mp3">
-				</audio>
-			</div>
-			<div class="project">
-				<div class="image-stack" id="lal" onclick="location.href = 'teaser-pages/lal.html'">
-					<img src="gameplan-assets/lal/lal-icon.png" id="lal-image" alt="lal-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/lal/lal-glow.png" id="lal-glow" alt="lal-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>SEP 2026</h3>
-				</div>
-				<audio controls class="hover-audio" id="lal-audio" volume="0">
-					<source src="gameplan-assets/lal/lal-sample.mp3" type="audio/mp3">
-				</audio>
-			</div>
-			<div class="project">
-				<div class="image-stack" id="hrn" onclick="location.href = 'teaser-pages/hrn.html'">
-					<img src="gameplan-assets/hrn/hrn-icon.png" id="hrn-image" alt="hrn-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/hrn/hrn-glow.png" id="hrn-glow" alt="hrn-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>JUN 2027</h3>
-				</div>
-				<audio controls class="hover-audio" id="hrn-audio" volume="0">
-					<source src="gameplan-assets/hrn/hrn-sample.mp3" type="audio/mp3">
-				</audio>
-			</div>
-			<!-- <div class="project">
-				<div class="image-stack" id="tjm" onclick="location.href = 'teaser-pages/tjm.html'">
-					<img src="gameplan-assets/tjm/tjm-icon.png" id="tjm-image" alt="tjm-icon.png"
-						class="project-image locked">
-					<img src="gameplan-assets/tjm/tjm-glow.png" id="tjm-glow" alt="tjm-glow.png" class="glow-image"
-						style="opacity: 0;">
-					<h3>JUN 2027</h3>
-				</div>
-				<audio controls class="hover-audio" id="tjm-audio" volume="0">
-					<source src="gameplan-assets/tjm/tjm-sample.mp3" type="audio/mp3">
-				</audio>
-			</div> -->
-		</div>
-	</section>
-	<section class="tomorrow" id="tomorrow">
-		<div class="max-width">
-			<!-- <h2 class="title">Latest Release</h2> -->
-			<div class="tomorrow-content">
-				<img src="assets/forgotMyName.png" alt="Forgot My Name Album Artwork">
-				<div class="button-container"
-					onclick="window.location='https://open.spotify.com/track/37Zf1KF4jlAzZfORWL9JQ4?si=76ff7e88a8b143c5'">
-					<i class="fa-brands fa-spotify stream-button spoti-button"></i>
-					<p>Spotify</p>
-				</div>
-				<div class="button-container"
-					onclick="window.location='https://music.apple.com/us/artist/saadin-dassum/1469155696'">
-					<i class="fa-brands fa-apple stream-button"></i>
-					<p>Apple Music</p>
+		<section class="tomorrow" id="tomorrow">
+			<div class="max-width">
+				<!-- <h2 class="title">Latest Release</h2> -->
+				<div class="tomorrow-content">
+					<img src="assets/forgotMyName.png" alt="Forgot My Name Album Artwork">
+					<div class="button-container"
+						onclick="window.location='https://open.spotify.com/track/37Zf1KF4jlAzZfORWL9JQ4?si=76ff7e88a8b143c5'">
+						<i class="fa-brands fa-spotify stream-button spoti-button"></i>
+						<p>Spotify</p>
+					</div>
+					<div class="button-container"
+						onclick="window.location='https://music.apple.com/us/artist/saadin-dassum/1469155696'">
+						<i class="fa-brands fa-apple stream-button"></i>
+						<p>Apple Music</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
+		</section>
+	</main>
 	<footer>
 		<img src="assets/fullSD.png" alt="Saadin Dassum logo">
 		<span>Created by<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Saadin Dassum </a>
@@ -209,6 +178,22 @@
 	<script src="javascript/crash-stars.js"></script>
 	<script src="hover-play.js"></script>
 	<script src="javascript/flexible-poster.js"></script>
+	<script>
+		// Additional fallback for video loading issues
+		document.addEventListener('DOMContentLoaded', function () {
+			const video = document.querySelector('#video-banner');
+			const fallbackImg = document.querySelector('#fallback-banner');
+
+			// Check if video fails to load
+			video.addEventListener('error', function () {
+				video.style.display = 'none';
+				fallbackImg.style.display = 'block';
+			});
+		});
+	</script>
+
 </body>
+
+</html>
 
 </html>
