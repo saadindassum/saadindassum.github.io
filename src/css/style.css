@@ -1,0 +1,320 @@
+/* P A L E T T E
+Amarillo patito: #fabf00
+Blue Grey:  #6699CC
+*/
+
+:root {
+    --secondary: #fabf00;
+    --primary: #ffffff;
+    --light-space: #18003f --dark-space: #02001a;
+}
+
+/* F O N T S */
+@font-face {
+    font-family: 'sang';
+    src: url('fonts/SangBleuKingdom-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangMed';
+    src: url('fonts/SangBleuKingdom-Medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sangBold';
+    src: url('fonts/SangBleuKingdom-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*global styling*/
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    color: white;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'sangBold';
+}
+
+section {
+    padding: 100px 0;
+}
+
+.about,
+.news,
+.tomorrow,
+footer {
+    font-family: 'sang';
+}
+
+
+/* Star background */
+
+#star-container {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, var(--light-space) 0%, var(--dark-space) 35%, black 100%);
+    /* this commented out gradient is also pretty sick, maybe for another season
+  or if you figure out how to change the value as you scroll, you might be able to make one turn into the other */
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    z-index: -1000;
+}
+
+.star {
+    background-color: #fffaf1;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+
+/* Video Banner */
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-banner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+#fallback-banner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/*About Section Styling*/
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+/*Download EPK button*/
+.about .about-content .right a {
+    display: inline-block;
+    background: #fabf00;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #fabf00;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: white;
+    background: none;
+}
+
+
+/*Teams styling*/
+
+.news {
+    color: #fff;
+    background: #0f121c;
+}
+
+.news .title::before {
+    background: #fff;
+}
+
+/*footer styling*/
+footer {
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+footer span a {
+    color: #fabf00;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Ensure video maintains aspect ratio on different screen sizes */
+@media (min-aspect-ratio: 21/9) {
+    #video-banner {
+        width: 100%;
+        height: auto;
+    }
+
+    #fallback-banner {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 21/9) {
+    #video-banner {
+        width: auto;
+        height: 100%;
+    }
+
+    #fallback-banner {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+/* Responsive media query */
+
+@media (max-width: 2560px) {
+    #video-bg {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1300px) {}
+
+@media (max-width: 1104px) {}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+
+    .max-width {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 690px) {
+
+    /*690 global*/
+    .max-width {
+        padding: 23px;
+    }
+}
+
+@media (max-width: 500px) {
+    #video-banner {
+        left: -85%;
+    }
+}
+
+/* Ensure video maintains aspect ratio on different screen sizes */
+@media (min-aspect-ratio: 21/9) {
+    #video-banner {
+        width: 100%;
+        height: auto;
+    }
+
+    #fallback-banner {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 21/9) {
+    #video-banner {
+        width: auto;
+        height: 100%;
+    }
+
+    #fallback-banner {
+        width: auto;
+        height: 100%;
+    }
+}
