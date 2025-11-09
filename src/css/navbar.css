@@ -29,6 +29,12 @@
 	justify-content: space-between;
 }
 
+.navbar .menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .navbar .menu li {
 	list-style: none;
 	display:  inline-block;
@@ -178,7 +184,7 @@
 	}
 
 	.navbar .menu.active{
-		left: 0;
+		left: 0 !important;
 	}
 
 	.navbar .menu li{
@@ -191,7 +197,7 @@
 	}
 
 	.menu-btn{
-		display: block;
+		display: block !important;
 		z-index: 999;
 	}
 
