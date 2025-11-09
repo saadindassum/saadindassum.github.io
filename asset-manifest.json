@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dbd9758c.css",
+    "main.js": "/static/js/main.d4cdcb4b.js",
+    "static/js/453.46bd9442.chunk.js": "/static/js/453.46bd9442.chunk.js",
+    "static/media/SangBleuKingdom-Medium.otf": "/static/media/SangBleuKingdom-Medium.26d0bba19f11cac69216.otf",
+    "static/media/SangBleuKingdom-Bold.otf": "/static/media/SangBleuKingdom-Bold.651549f4fa078da7877d.otf",
+    "static/media/SangBleuKingdom-Regular.otf": "/static/media/SangBleuKingdom-Regular.8f595238b8506fd25655.otf",
+    "static/media/sd-tile.svg": "/static/media/sd-tile.f14ade355e953e2fc8ee.svg",
+    "index.html": "/index.html",
+    "main.dbd9758c.css.map": "/static/css/main.dbd9758c.css.map",
+    "main.d4cdcb4b.js.map": "/static/js/main.d4cdcb4b.js.map",
+    "453.46bd9442.chunk.js.map": "/static/js/453.46bd9442.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbd9758c.css",
+    "static/js/main.d4cdcb4b.js"
+  ]
+}

@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && git checkout -B gh-pages && cp -r build/* . && git add . && git commit -m 'Deploy React app to GitHub Pages' && git push -f origin gh-pages && git checkout master"
   },
   "eslintConfig": {
     "extends": [
