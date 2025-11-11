@@ -1,0 +1,139 @@
+/* CSS Variables */
+:root {
+    --display-card-color: rgba(8, 8, 8, 0.3);
+}
+
+/* Links Display Container - Main wrapper */
+.links-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Links Display Card - The main card containing album art and streaming links */
+.links-display-card {
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* Album Info Section */
+.album-info {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.album-artwork {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
+
+.album-details {
+    padding: 16px 20px;
+    margin: 20px 0;
+    border: 0 2px solid var(--display-card-color);
+}
+
+.album-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: white;
+    font-family: 'sangBold', sans-serif;
+}
+
+.artist-name {
+    font-size: 16px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'sang', sans-serif;
+}
+
+/* Streaming Links Container */
+.streaming-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--display-card-color);
+}
+
+/* Individual Streaming Link */
+.streaming-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'sang', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.streaming-link:hover {
+    background: rgba(8, 8, 8, 0.9);
+}
+
+.streaming-link:last-child {
+    border-bottom: none;
+}
+
+.streaming-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.streaming-icon {
+    font-size: 24px;
+}
+
+.streaming-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    flex: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .links-display-container {
+        padding: 16px;
+    }
+
+    .links-display-card {
+        max-width: 100%;
+        margin: 0 16px;
+    }
+
+    .album-title {
+        font-size: 20px;
+    }
+
+    .streaming-link {
+        padding: 14px 16px;
+    }
+
+    .streaming-icon {
+        font-size: 20px;
+    }
+
+    .streaming-name {
+        font-size: 15px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .links-display-card {
+        margin: 0 8px;
+    }
+}
