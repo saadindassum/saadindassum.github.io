@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Timeline from './components/Timeline';
-import Tomorrow from './components/Tomorrow';
+import LatestRelease from './components/LatestRelease';
 import Footer from './components/Footer';
 import StarContainer from './components/StarContainer';
 import TeaserPage from './components/TeaserPage';
@@ -18,7 +18,7 @@ const HomePage: React.FC = () => (
     <Banner />
     <main>
       <Timeline />
-      <Tomorrow />
+      <LatestRelease />
     </main>
     <Footer />
   </div>
