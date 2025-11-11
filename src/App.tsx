@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Timeline from './components/Timeline';
@@ -10,9 +10,26 @@ import TeaserPage from './components/TeaserPage';
 import { getTeaserPageData } from './data/teaserPages';
 import './App.css';
 
+// Hook to handle hash navigation
+const HashNavigator: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  return null;
+};
+
 // Home page component
 const HomePage: React.FC = () => (
   <div className="App">
+    <HashNavigator />
     <StarContainer />
     <Navbar />
     <Banner />
