@@ -6,19 +6,23 @@ const LatestRelease: React.FC = () => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
-      url: 'https://open.spotify.com/track/37Zf1KF4jlAzZfORWL9JQ4?si=76ff7e88a8b143c5',
+      url: 'https://open.spotify.com/track/7DThWCfZmHCXk4ULwMDAzm?si=d0732b37554444b4',
       service: StreamServ.SPOTIFY
     },
     {
-      url: 'https://music.apple.com/us/artist/saadin-dassum/1469155696',
+      url: 'https://music.apple.com/us/song/m%C3%A1s-de-lo-que-debo/1847073695',
       service: StreamServ.APPLE_MUSIC
     },
     {
-      url: 'https://www.deezer.com/us/album/663442141',
+      url: 'https://youtu.be/3Gtzsn1ngIc?si=DM6dIsi3OF6lsd9v',
+      service: StreamServ.YOUTUBE
+    },
+    {
+      url: 'https://link.deezer.com/s/31BdW23VCt2I2i6C4Dta3',
       service: StreamServ.DEEZER
     },
     {
-      url: 'https://amazon.fr/music/player/albums/B0DKQPVXZ4?marketplaceId=A13V1IB3VIYZZH&musicTerritory=FR&ref=dm_sh_PJIZdkXfikDHmmJpYCdgAPBkW',
+      url: 'https://music.amazon.ca/albums/B0FWKVCQFM?marketplaceId=A2EUQ1WTGCTBG2&musicTerritory=CA&ref=dm_sh_odpqXUbLaxhWYzDqqGnV8rXDL',
       service: StreamServ.AMAZON_MUSIC
     }
   ];
@@ -28,7 +32,7 @@ const LatestRelease: React.FC = () => {
       <div className="max-width">
         <LinksDisplay
           albumArt="/assets/latest-release.png"
-          albumTitle="Forgot My Name"
+          albumTitle="Más de lo que debo"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
         />

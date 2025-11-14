@@ -82,6 +82,18 @@ footer {
     font-family: 'sang';
 }
 
+/* Fix anchor navigation for latest-release section */
+.latest-release {
+    scroll-margin-top: 80px; /* Desktop navbar height */
+}
+
+/* Mobile responsive scroll margin */
+@media (max-width: 947px) {
+    .latest-release {
+        scroll-margin-top: 70px; /* Mobile navbar height */
+    }
+}
+
 
 /* Star background */
 

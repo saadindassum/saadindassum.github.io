@@ -3,7 +3,8 @@ export enum StreamServ {
   APPLE_MUSIC = 'apple_music',
   AMAZON_MUSIC = 'amazon_music',
   TIDAL = 'tidal',
-  DEEZER = 'deezer'
+  DEEZER = 'deezer',
+  YOUTUBE = 'youtube'
 }
 
 export interface StreamingLinkData {

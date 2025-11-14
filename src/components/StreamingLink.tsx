@@ -39,6 +39,12 @@ const StreamingLink: React.FC<StreamingLinkProps> = ({ url, service }) => {
           name: 'Deezer',
           color: '#FEAA2D'
         };
+      case StreamServ.YOUTUBE:
+        return {
+          icon: 'fa-brands fa-youtube',
+          name: 'YouTube',
+          color: '#fa3333ff'
+        };
       default:
         return {
           icon: 'fa-solid fa-music',

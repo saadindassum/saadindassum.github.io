@@ -7,6 +7,7 @@ import LatestRelease from './components/LatestRelease';
 import Footer from './components/Footer';
 import StarContainer from './components/StarContainer';
 import TeaserPage from './components/TeaserPage';
+import LatestReleasePage from './components/LatestReleasePage';
 import { getTeaserPageData } from './data/teaserPages';
 import './App.css';
 
@@ -68,6 +69,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/latest-release" element={<LatestReleasePage />} />
         <Route path="/teaser-pages/mrc" element={<TeaserPageWrapper id="mrc" />} />
         <Route path="/teaser-pages/ris" element={<TeaserPageWrapper id="ris" />} />
         <Route path="/teaser-pages/dis" element={<TeaserPageWrapper id="dis" />} />
