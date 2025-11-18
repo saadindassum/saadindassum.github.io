@@ -19,7 +19,11 @@ const LinksDisplay: React.FC<LinksDisplayProps> = ({
     <div className="links-display-container">
       <div className="links-display-card">
         <div className="album-info">
-          <img src={albumArt} alt={`${albumTitle} Album Artwork`} className="album-artwork" />
+          <picture>
+            <source media="(min-width: 768px)" srcSet="/assets/latest-release-large.webp" type="image/webp" />
+            <source srcSet="/assets/latest-release.webp" type="image/webp" />
+            <img src={albumArt} alt={`${albumTitle} Album Artwork`} className="album-artwork" />
+          </picture>
           <div className="album-details">
             <h3 className="album-title">{albumTitle}</h3>
             <p className="artist-name">{artistName}</p>
