@@ -101,7 +101,8 @@ footer {
     position: fixed;
     left: 0px;
     top: 0px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100vw;
     background: linear-gradient(180deg, var(--light-space) 0%, var(--dark-space) 35%, black 100%);
     /* this commented out gradient is also pretty sick, maybe for another season
