@@ -1,19 +1,21 @@
 import React from 'react';
 import StreamingLink from './StreamingLink';
-import { StreamingLinkData } from '../types/StreamingService';
+import { StreamingLinkData, StreamServ } from '../types/StreamingService';
 
 interface LinksDisplayProps {
   albumArt: string;
   albumTitle: string;
   artistName: string;
   streamingLinks: StreamingLinkData[];
+  sendStreamEvent?: () => void;
 }
 
 const LinksDisplay: React.FC<LinksDisplayProps> = ({
   albumArt,
   albumTitle,
   artistName,
-  streamingLinks
+  streamingLinks,
+  sendStreamEvent
 }) => {
   return (
     <div className="links-display-container">
@@ -35,6 +37,7 @@ const LinksDisplay: React.FC<LinksDisplayProps> = ({
               key={index}
               url={link.url}
               service={link.service}
+              sendStreamEvent={sendStreamEvent}
             />
           ))}
         </div>

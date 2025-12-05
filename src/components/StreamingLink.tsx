@@ -4,9 +4,10 @@ import { StreamServ } from '../types/StreamingService';
 interface StreamingLinkProps {
   url: string;
   service: StreamServ;
+  sendStreamEvent?: () => void;
 }
 
-const StreamingLink: React.FC<StreamingLinkProps> = ({ url, service }) => {
+const StreamingLink: React.FC<StreamingLinkProps> = ({ url, service, sendStreamEvent }) => {
   const getServiceConfig = (service: StreamServ) => {
     switch (service) {
       case StreamServ.SPOTIFY:
@@ -57,6 +58,9 @@ const StreamingLink: React.FC<StreamingLinkProps> = ({ url, service }) => {
   const config = getServiceConfig(service);
 
   const handleClick = () => {
+    if (sendStreamEvent) {
+      sendStreamEvent();
+    }
     window.open(url, '_blank');
   };
 

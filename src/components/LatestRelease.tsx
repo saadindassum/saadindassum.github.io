@@ -2,7 +2,11 @@ import React from 'react';
 import LinksDisplay from './LinksDisplay';
 import { StreamServ, StreamingLinkData } from '../types/StreamingService';
 
-const LatestRelease: React.FC = () => {
+interface LatestReleaseProps {
+  sendStreamEvent?: () => void;
+}
+
+const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
@@ -35,6 +39,7 @@ const LatestRelease: React.FC = () => {
           albumTitle="Más de lo que debo"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
+          sendStreamEvent={sendStreamEvent}
         />
       </div>
     </section>
