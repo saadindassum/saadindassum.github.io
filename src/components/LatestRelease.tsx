@@ -10,23 +10,23 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
-      url: 'https://open.spotify.com/track/7DThWCfZmHCXk4ULwMDAzm?si=d0732b37554444b4',
+      url: 'https://open.spotify.com/track/38drRz6qZVXak0nwhP6Y9L?si=f620ad3d8b514c85',
       service: StreamServ.SPOTIFY
     },
     {
-      url: 'https://music.apple.com/us/song/m%C3%A1s-de-lo-que-debo/1847073695',
+      url: 'https://music.apple.com/us/song/te-quiero-amar-i-want-you-back/1854516896',
       service: StreamServ.APPLE_MUSIC
     },
     {
-      url: 'https://youtu.be/3Gtzsn1ngIc?si=DM6dIsi3OF6lsd9v',
+      url: 'https://youtu.be/X2rL7HdtJl8?si=DWPo8xZ0iJ8l93GA',
       service: StreamServ.YOUTUBE
     },
     {
-      url: 'https://link.deezer.com/s/31BdW23VCt2I2i6C4Dta3',
+      url: 'https://link.deezer.com/s/31RbFtAzy33cizHNkEsJY',
       service: StreamServ.DEEZER
     },
     {
-      url: 'https://music.amazon.ca/albums/B0FWKVCQFM?marketplaceId=A2EUQ1WTGCTBG2&musicTerritory=CA&ref=dm_sh_odpqXUbLaxhWYzDqqGnV8rXDL',
+      url: 'https://music.amazon.com/albums/B0G2HM9TG2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_q42fdCBowhNZUWsLeULPOJ3as&trackAsin=B0G2HPVWNC',
       service: StreamServ.AMAZON_MUSIC
     }
   ];
