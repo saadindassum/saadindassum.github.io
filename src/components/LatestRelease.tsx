@@ -36,7 +36,7 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
       <div className="max-width">
         <LinksDisplay
           albumArt="/assets/latest-release.png"
-          albumTitle="Más de lo que debo"
+          albumTitle="Te Quiero Amar"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
           sendStreamEvent={sendStreamEvent}
