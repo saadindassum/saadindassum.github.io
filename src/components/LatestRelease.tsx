@@ -10,23 +10,23 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
-      url: 'https://open.spotify.com/track/38drRz6qZVXak0nwhP6Y9L?si=f620ad3d8b514c85',
+      url: 'https://open.spotify.com/track/0tqlthRzKIMFXFUqeqjFJU?si=1f822510295a43af',
       service: StreamServ.SPOTIFY
     },
     {
-      url: 'https://music.apple.com/us/song/te-quiero-amar-i-want-you-back/1854516896',
+      url: 'https://music.apple.com/us/song/jacoba-guitarras/1860690408',
       service: StreamServ.APPLE_MUSIC
     },
     {
-      url: 'https://youtu.be/X2rL7HdtJl8?si=DWPo8xZ0iJ8l93GA',
+      url: 'https://youtu.be/8ol0PswByFw?si=5LOx1spRN74LN72e',
       service: StreamServ.YOUTUBE
     },
     {
-      url: 'https://link.deezer.com/s/31RbFtAzy33cizHNkEsJY',
+      url: 'https://link.deezer.com/s/327ab7mMOOeRxZNjUs6pI',
       service: StreamServ.DEEZER
     },
     {
-      url: 'https://music.amazon.com/albums/B0G2HM9TG2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_q42fdCBowhNZUWsLeULPOJ3as&trackAsin=B0G2HPVWNC',
+      url: 'https://music.amazon.com/albums/B0G6GK125G?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_i7AOyzy5hQ6CH0I0SZtChTo5J&trackAsin=B0G6G8P8FN',
       service: StreamServ.AMAZON_MUSIC
     }
   ];
@@ -36,7 +36,7 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
       <div className="max-width">
         <LinksDisplay
           albumArt="/assets/latest-release.png"
-          albumTitle="Te Quiero Amar"
+          albumTitle="Jacoba Guitarras"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
           sendStreamEvent={sendStreamEvent}
