@@ -10,23 +10,23 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
-      url: 'https://open.spotify.com/track/0tqlthRzKIMFXFUqeqjFJU?si=1f822510295a43af',
+      url: 'https://open.spotify.com/track/49rZPCGErA7wAWowyF1C5V?si=583fcf77785b4b39',
       service: StreamServ.SPOTIFY
     },
     {
-      url: 'https://music.apple.com/us/song/jacoba-guitarras/1860690408',
+      url: 'https://music.apple.com/us/album/3-6-coraz%C3%B3n-elevado-al-sexto/1872828353?i=1872828356',
       service: StreamServ.APPLE_MUSIC
     },
     {
-      url: 'https://youtu.be/8ol0PswByFw?si=5LOx1spRN74LN72e',
+      url: 'https://www.youtube.com/watch?v=QF52xvBrpoA&list=RDQF52xvBrpoA',
       service: StreamServ.YOUTUBE
     },
     {
-      url: 'https://link.deezer.com/s/327ab7mMOOeRxZNjUs6pI',
+      url: 'https://link.deezer.com/s/32r5EOQAPy6tM9JwtFS5W',
       service: StreamServ.DEEZER
     },
     {
-      url: 'https://music.amazon.com/albums/B0G6GK125G?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_i7AOyzy5hQ6CH0I0SZtChTo5J&trackAsin=B0G6G8P8FN',
+      url: 'https://music.amazon.com/albums/B0GK5ZD9C8?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_NAx2UUyLCqnKe1Spi81L5dUxe&trackAsin=B0GK6KHKD7',
       service: StreamServ.AMAZON_MUSIC
     }
   ];
@@ -36,7 +36,7 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
       <div className="max-width">
         <LinksDisplay
           albumArt="/assets/latest-release.png"
-          albumTitle="Jacoba Guitarras"
+          albumTitle="<3^6 (Corazón elevado al sexto)"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
           sendStreamEvent={sendStreamEvent}
