@@ -20,9 +20,11 @@ const Accolades: React.FC = () => {
             <div className='max-width hook-text'>
                 So? Who likes this guy anyway?
             </div>
-            <AchievementBox text={ac1Text} imagePath={ac1Path} orgImage={org1} />
-            <AchievementBox text={ac2Text} imagePath={ac2Path} orgImage={org2} />
-            <AchievementBox text={ac3Text} imagePath={ac3Path} orgImage={org3} imageMaxHeight={175} />
+            <div className="achievements-container">
+                <AchievementBox text={ac1Text} imagePath={ac1Path} orgImage={org1} />
+                <AchievementBox text={ac2Text} imagePath={ac2Path} orgImage={org2} />
+                <AchievementBox text={ac3Text} imagePath={ac3Path} orgImage={org3} imageMaxHeight={175} />
+            </div>
 
         </section>
     );

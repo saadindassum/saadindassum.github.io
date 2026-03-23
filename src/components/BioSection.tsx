@@ -12,7 +12,7 @@ const BioSection: React.FC = () => {
                     An artist that knows no bounds.<br /><br />
                     &nbsp;&nbsp;&nbsp;&nbsp;Nostalgic mad scientist, dreamer of the day. His name?<br /><br />
                     &nbsp;&nbsp;&nbsp;&nbsp;Saadin Dassum.<br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;The Ecuadorian Miami-based artist has his sights set on "Rock in Spanglish", a
+                    &nbsp;&nbsp;&nbsp;&nbsp;The Ecuadorian-born Miami-based artist has his sights set on "Rock in Spanglish", a
                     tale of redemption narrated by a retired latin lover known only as "The Man of a Million
                     Mistakes".<br /><br />
                     &nbsp;&nbsp;&nbsp;&nbsp;Rock in Spanglish explores the acoustics of the latin pop and merengue that molded

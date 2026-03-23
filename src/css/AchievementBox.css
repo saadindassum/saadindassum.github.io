@@ -13,7 +13,6 @@
     bottom: -125px;
     right: -125px;
     height: 300px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
@@ -31,4 +30,35 @@
     max-height: 150px;
     margin: 0 auto;
     display: block;
+}
+
+@media (max-width: 1024px) {
+    .achievement-image {
+        right: 0;
+        bottom: -115px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .org-image {
+        max-height: none;
+        max-height: 150px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .org-image-container,
+    .achievement-box {
+        width: 90vw;
+    }
+
+    .achievement-image {
+        position: absolute;
+        bottom: -115px;
+        height: 200px;
+        z-index: 10;
+    }
 }
