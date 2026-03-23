@@ -31,6 +31,8 @@ const Navbar: React.FC = () => {
         </div>
         <ul className={`menu ${isMobileMenuActive ? 'active' : ''}`}>
           <li><a href="#timeline" className="menu-btn" onClick={handleMenuItemClick}>Timeline</a></li>
+          <li><a href="#bio" className="menu-btn" onClick={handleMenuItemClick}>Bio</a></li>
+          <li><a href="#accolades" className="menu-btn" onClick={handleMenuItemClick}>Accolades</a></li>
           <li><a href="#latest-release" className="menu-btn" onClick={handleMenuItemClick}>Latest Release</a></li>
           <li><a href="https://dev.saadindassum.com/" className="menu-btn" onClick={handleMenuItemClick}>&lt;/&gt;</a></li>
           <li>

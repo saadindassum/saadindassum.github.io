@@ -10,6 +10,8 @@ import TeaserPage from './components/TeaserPage';
 import LatestReleasePage from './components/LatestReleasePage';
 import { getTeaserPageData } from './data/teaserPages';
 import './App.css';
+import BioSection from './components/BioSection';
+import Accolades from './components/Accolades';
 
 // Hook to handle hash navigation
 const HashNavigator: React.FC = () => {
@@ -36,6 +38,8 @@ const HomePage: React.FC = () => (
     <Banner />
     <main>
       <Timeline />
+      <BioSection />
+      <Accolades />
       <LatestRelease />
     </main>
     <Footer />

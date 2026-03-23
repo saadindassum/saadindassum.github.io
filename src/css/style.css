@@ -31,6 +31,13 @@ Blue Grey:  #6699CC
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'sangSunrise';
+    src: url('fonts/SangBleuSunrise-MediumItalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*global styling*/
 
 html {
@@ -73,6 +80,7 @@ section .title {
 
 section {
     padding: 100px 0;
+    font-family: 'sang';
 }
 
 .about,
@@ -84,13 +92,15 @@ footer {
 
 /* Fix anchor navigation for latest-release section */
 .latest-release {
-    scroll-margin-top: 80px; /* Desktop navbar height */
+    scroll-margin-top: 80px;
+    /* Desktop navbar height */
 }
 
 /* Mobile responsive scroll margin */
 @media (max-width: 947px) {
     .latest-release {
-        scroll-margin-top: 70px; /* Mobile navbar height */
+        scroll-margin-top: 70px;
+        /* Mobile navbar height */
     }
 }
 
@@ -151,6 +161,25 @@ footer {
     width: auto;
     height: auto;
     object-fit: cover;
+}
+
+.banner-logo {
+    pointer-events: none;
+}
+
+/* Mobile responsive styling for banner logo */
+@media (max-width: 768px) {
+    .banner-logo {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 150px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-logo {
+        max-width: 120px !important;
+    }
 }
 
 
