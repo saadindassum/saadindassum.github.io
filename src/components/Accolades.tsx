@@ -11,7 +11,7 @@ const Accolades: React.FC = () => {
     const ac2Path: string = "/assets/resume-assets/key-stevie-sled.png";
     const org2: string = "assets/resume-assets/mff-logo.webp";
 
-    const ac3Text: string = "'The Mercy of the Moon' was an official selection at the Subculture Film Festival, a festival by veterans of the Miami Film Festival.";
+    const ac3Text: string = "'The Mercy of the Moon' was an official selection at the Subtropic Film Festival, a festival by veterans of the Miami Film Festival.";
     const ac3Path: string = "assets/resume-assets/mercy-cassette.webp";
     const org3: string = "assets/resume-assets/subculture-logo-white.webp";
 
