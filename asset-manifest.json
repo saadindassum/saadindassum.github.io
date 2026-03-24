@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.df98160c.css",
-    "main.js": "/static/js/main.6d977dd5.js",
+    "main.js": "/static/js/main.8660019c.js",
     "static/js/453.46bd9442.chunk.js": "/static/js/453.46bd9442.chunk.js",
     "static/media/SangBleuKingdom-Medium.otf": "/static/media/SangBleuKingdom-Medium.26d0bba19f11cac69216.otf",
     "static/media/SangBleuKingdom-Bold.otf": "/static/media/SangBleuKingdom-Bold.651549f4fa078da7877d.otf",
@@ -10,11 +10,11 @@
     "static/media/sd-tile.svg": "/static/media/sd-tile.f14ade355e953e2fc8ee.svg",
     "index.html": "/index.html",
     "main.df98160c.css.map": "/static/css/main.df98160c.css.map",
-    "main.6d977dd5.js.map": "/static/js/main.6d977dd5.js.map",
+    "main.8660019c.js.map": "/static/js/main.8660019c.js.map",
     "453.46bd9442.chunk.js.map": "/static/js/453.46bd9442.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df98160c.css",
-    "static/js/main.6d977dd5.js"
+    "static/js/main.8660019c.js"
   ]
 }
