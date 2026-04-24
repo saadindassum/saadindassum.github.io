@@ -10,23 +10,23 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
   // Define streaming links for "Forgot My Name"
   const streamingLinks: StreamingLinkData[] = [
     {
-      url: 'https://open.spotify.com/track/49rZPCGErA7wAWowyF1C5V?si=583fcf77785b4b39',
+      url: 'https://open.spotify.com/track/7pyQ7LkqA3x1UM9bgyL68E?si=ba7de92bec2140e9',
       service: StreamServ.SPOTIFY
     },
     {
-      url: 'https://music.apple.com/us/album/3-6-coraz%C3%B3n-elevado-al-sexto/1872828353?i=1872828356',
+      url: 'https://music.apple.com/us/song/down-by-biscayne-202x/1888960349',
       service: StreamServ.APPLE_MUSIC
     },
     {
-      url: 'https://www.youtube.com/watch?v=QF52xvBrpoA&list=RDQF52xvBrpoA',
+      url: 'https://www.youtube.com/watch?v=opxxrirfj7w',
       service: StreamServ.YOUTUBE
     },
     {
-      url: 'https://link.deezer.com/s/32r5EOQAPy6tM9JwtFS5W',
+      url: 'https://link.deezer.com/s/334Z0rEX5I2MYygG3IqV2',
       service: StreamServ.DEEZER
     },
     {
-      url: 'https://music.amazon.com/albums/B0GK5ZD9C8?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_NAx2UUyLCqnKe1Spi81L5dUxe&trackAsin=B0GK6KHKD7',
+      url: 'https://music.amazon.com/albums/B0GV97YWGW?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_y655jARX97erFBOEzIfOVmlwf&trackAsin=B0GV9B4116',
       service: StreamServ.AMAZON_MUSIC
     }
   ];
@@ -36,7 +36,7 @@ const LatestRelease: React.FC<LatestReleaseProps> = ({ sendStreamEvent }) => {
       <div className="max-width">
         <LinksDisplay
           albumArt="/assets/latest-release.png"
-          albumTitle="<3^6 (Corazón elevado al sexto)"
+          albumTitle="Down By Biscayne (202X)"
           artistName="Saadin Dassum"
           streamingLinks={streamingLinks}
           sendStreamEvent={sendStreamEvent}
