@@ -16,7 +16,7 @@ const CSP = [
   "object-src 'none'",
 ].join('; ');
 
-type Message = 'pending' | 'success' | 'failure' | 'tampered';
+type Message = 'pending' | 'emtech' | 'agent' | 'failure' | 'tampered';
 
 const Drop: React.FC = () => {
   const [message, setMessage] = useState<Message>('pending');
@@ -37,6 +37,8 @@ const Drop: React.FC = () => {
     } else {
       try {
         const decoded = atob(fragment);
+        // Basically rules added for safety so that we can do our magic
+        // without hackers doing our fans dirty.
         const safeLocation = {
           get href() { return window.location.href; },
           set href(_: string) { setMessage('tampered'); },
@@ -59,9 +61,18 @@ const Drop: React.FC = () => {
           forward() { setMessage('tampered'); },
         };
         const result = new Function('window', decoded)({ ...window, location: safeLocation, history: safeHistory });
-        setMessage(result === true ? 'success' : 'failure');
+        switch (result) {
+          case 'emtech':
+            setMessage('emtech');
+            break;
+          case 'agent':
+            setMessage('agent');
+            break;
+          default:
+            setMessage('failure');
+        }
       } catch {
-        setMessage('failure');
+        setMessage('tampered');
       }
     }
 
@@ -73,7 +84,8 @@ const Drop: React.FC = () => {
 
   const text = {
     pending: '',
-    success: 'Every three to four months. Check back here.',
+    emtech: 'EmTech message will be displayed here',
+    agent: 'Agent message will be displayed here',
     failure: 'You must scan a QR code at the right location',
     tampered: 'Our comms are being tampered with. Close this tab ASAP!',
   }[message];
