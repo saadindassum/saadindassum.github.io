@@ -12,6 +12,7 @@ import { getTeaserPageData } from './data/teaserPages';
 import './App.css';
 import BioSection from './components/BioSection';
 import Accolades from './components/Accolades';
+import Drop from './components/Drop';
 
 // Hook to handle hash navigation
 const HashNavigator: React.FC = () => {
@@ -79,6 +80,7 @@ function App() {
         <Route path="/teaser-pages/dis" element={<TeaserPageWrapper id="dis" />} />
         <Route path="/teaser-pages/lal" element={<TeaserPageWrapper id="lal" />} />
         <Route path="/teaser-pages/hrn" element={<TeaserPageWrapper id="hrn" />} />
+        <Route path="/drop" element={<Drop />} />
       </Routes>
     </Router>
   );
