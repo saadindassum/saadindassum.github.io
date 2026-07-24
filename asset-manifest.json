@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.df98160c.css",
-    "main.js": "/static/js/main.b3e4c930.js",
+    "main.css": "/static/css/main.bc7e2a9b.css",
+    "main.js": "/static/js/main.6cb7c72b.js",
     "static/js/453.4c49a21b.chunk.js": "/static/js/453.4c49a21b.chunk.js",
     "static/media/SangBleuKingdom-Medium.otf": "/static/media/SangBleuKingdom-Medium.26d0bba19f11cac69216.otf",
     "static/media/SangBleuKingdom-Bold.otf": "/static/media/SangBleuKingdom-Bold.651549f4fa078da7877d.otf",
@@ -9,12 +9,12 @@
     "static/media/SangBleuSunrise-MediumItalic.otf": "/static/media/SangBleuSunrise-MediumItalic.d9b6cbe341b6a1d4d394.otf",
     "static/media/sd-tile.svg": "/static/media/sd-tile.f14ade355e953e2fc8ee.svg",
     "index.html": "/index.html",
-    "main.df98160c.css.map": "/static/css/main.df98160c.css.map",
-    "main.b3e4c930.js.map": "/static/js/main.b3e4c930.js.map",
+    "main.bc7e2a9b.css.map": "/static/css/main.bc7e2a9b.css.map",
+    "main.6cb7c72b.js.map": "/static/js/main.6cb7c72b.js.map",
     "453.4c49a21b.chunk.js.map": "/static/js/453.4c49a21b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df98160c.css",
-    "static/js/main.b3e4c930.js"
+    "static/css/main.bc7e2a9b.css",
+    "static/js/main.6cb7c72b.js"
   ]
 }
