@@ -13,6 +13,9 @@ import './App.css';
 import BioSection from './components/BioSection';
 import Accolades from './components/Accolades';
 import Drop from './components/Drop';
+import MailingDialog from './components/MailingDialog';
+import MailingListPage from './components/MailingListPage';
+import UnsubscribePage from './components/UnsubscribePage';
 
 // Hook to handle hash navigation
 const HashNavigator: React.FC = () => {
@@ -44,6 +47,7 @@ const HomePage: React.FC = () => (
       <LatestRelease />
     </main>
     <Footer />
+    <MailingDialog />
   </div>
 );
 
@@ -81,6 +85,8 @@ function App() {
         <Route path="/teaser-pages/lal" element={<TeaserPageWrapper id="lal" />} />
         <Route path="/teaser-pages/hrn" element={<TeaserPageWrapper id="hrn" />} />
         <Route path="/drop" element={<Drop />} />
+        <Route path="/mailing-list" element={<MailingListPage />} />
+        <Route path="/unsubscribe" element={<UnsubscribePage />} />
       </Routes>
     </Router>
   );

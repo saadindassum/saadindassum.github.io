@@ -13,7 +13,7 @@ const CrazyPlace: React.FC<CrazyPlaceProps> = ({ wordBank, tip, onClickHref = '#
   const intervalRefs = useRef<NodeJS.Timeout[]>([]);
 
   const frame = 33; // 33ms for ~30fps
-  const mWord = 0; // main word index
+  // const mWord = 0; // main word index
   const tShad = 1; // top shadow index
   const bShad = 2; // bottom shadow index
 

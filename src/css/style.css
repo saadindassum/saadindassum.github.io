@@ -6,7 +6,8 @@ Blue Grey:  #6699CC
 :root {
     --secondary: #fabf00;
     --primary: #ffffff;
-    --light-space: #18003f --dark-space: #02001a;
+    --light-space: #18003f;
+    --dark-space: #02001a;
 }
 
 /* F O N T S */
@@ -66,6 +67,7 @@ html {
 
 body {
     color: white;
+    background-color: black;
 }
 
 section .title {

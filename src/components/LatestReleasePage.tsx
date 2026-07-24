@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import StarContainer from './StarContainer';
 import LatestRelease from './LatestRelease';
 import Footer from './Footer';
-import { StreamServ } from '../types/StreamingService';
 
 declare global {
   interface Window {

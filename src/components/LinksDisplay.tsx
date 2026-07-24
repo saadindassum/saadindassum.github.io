@@ -1,6 +1,6 @@
 import React from 'react';
 import StreamingLink from './StreamingLink';
-import { StreamingLinkData, StreamServ } from '../types/StreamingService';
+import { StreamingLinkData } from '../types/StreamingService';
 
 interface LinksDisplayProps {
   albumArt: string;
