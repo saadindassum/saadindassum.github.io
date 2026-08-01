@@ -15,7 +15,7 @@ const Timeline: React.FC = () => {
       id: 'dis',
       iconSrc: '/gameplan-assets/dis/dis-icon.png',
       glowSrc: '/gameplan-assets/dis/dis-glow.png',
-      title: '2026',
+      title: '2027',
       href: '/teaser-pages/dis',
       audioSrc: '/gameplan-assets/dis/dis-sample.mp3'
     },
@@ -27,22 +27,22 @@ const Timeline: React.FC = () => {
       href: '/teaser-pages/mrc',
       audioSrc: '/gameplan-assets/mrc/mrc-sample.mp3'
     },
-    {
-      id: 'lal',
-      iconSrc: '/gameplan-assets/lal/lal-icon.png',
-      glowSrc: '/gameplan-assets/lal/lal-glow.png',
-      title: '202X',
-      href: '/teaser-pages/lal',
-      audioSrc: '/gameplan-assets/lal/lal-sample.mp3'
-    },
-    {
-      id: 'hrn',
-      iconSrc: '/gameplan-assets/hrn/hrn-icon.png',
-      glowSrc: '/gameplan-assets/hrn/hrn-glow.png',
-      title: '202X',
-      href: '/teaser-pages/hrn',
-      audioSrc: '/gameplan-assets/hrn/hrn-sample.mp3'
-    }
+    // {
+    //   id: 'lal',
+    //   iconSrc: '/gameplan-assets/lal/lal-icon.png',
+    //   glowSrc: '/gameplan-assets/lal/lal-glow.png',
+    //   title: '202X',
+    //   href: '/teaser-pages/lal',
+    //   audioSrc: '/gameplan-assets/lal/lal-sample.mp3'
+    // },
+    // {
+    //   id: 'hrn',
+    //   iconSrc: '/gameplan-assets/hrn/hrn-icon.png',
+    //   glowSrc: '/gameplan-assets/hrn/hrn-glow.png',
+    //   title: '202X',
+    //   href: '/teaser-pages/hrn',
+    //   audioSrc: '/gameplan-assets/hrn/hrn-sample.mp3'
+    // }
   ];
 
   return (
