@@ -51,6 +51,15 @@ const HomePage: React.FC = () => (
   </div>
 );
 
+// PDF viewer component
+const PdfViewer: React.FC<{ src: string; title: string }> = ({ src, title }) => (
+  <iframe
+    src={src}
+    title={title}
+    style={{ display: 'block', width: '100%', height: '100vh', border: 'none' }}
+  />
+);
+
 // Teaser page wrapper component
 const TeaserPageWrapper: React.FC<{ id: string }> = ({ id }) => {
   const data = getTeaserPageData(id);
@@ -87,6 +96,7 @@ function App() {
         <Route path="/drop" element={<Drop />} />
         <Route path="/mailing-list" element={<MailingListPage />} />
         <Route path="/unsubscribe" element={<UnsubscribePage />} />
+        <Route path="/gl-intel" element={<PdfViewer src="/assets/gl_intel_mail.pdf" title="GL Intel Mail" />} />
       </Routes>
     </Router>
   );
